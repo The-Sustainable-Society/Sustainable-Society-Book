@@ -1,0 +1,347 @@
+/* Nordisk Tema CSS - Inspireret af vikingestil og middelalderlige manuskripter */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --viking-brown: #8B4513;
+  --viking-red: #8B2323;
+  --viking-gold: #DAA520;
+  --viking-dark: #2F1D1A;
+  --viking-light: #F5E8C7;
+  --viking-parchment: #F4EAD5;
+  --border-ornament: 30px;
+  --text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Grundlæggende stil */
+body {
+  background-color: var(--viking-dark);
+  color: var(--viking-dark);
+  font-family: 'EB Garamond', serif;
+  line-height: 1.8;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAExElEQVRogZ2Zy3riMBCE1QZzY4PMjXDM+z/anuXgbMDYQEiA3TWVP661IxEOR4sT7Pb0VFdLZbVer02j0YjfSZL4b6PR8Pvdbpf8/O9/g4DUbrelqiqp69r/1/94L59JkkTqupaqqvz/UNJms5GqqiTLMkmSREXEn6Vp6vdqANqeZZm/q2XRfr+Xqqp8H4CK3+/3/o7ur9Vq/hygl99tNhvf/3q9erbkNxzQfqZpKuv12t9vt1tJ09QPr0EArxfrbxjQwCh9nudyPB5ltVr5PnSI9uCl37AoIDbbOKzr0N+GQbAWHJFhGJ7neb5YGmXDsGEQZxouhEp4lzDhRABo0CQwYAaHQbDYP2+32y8nlHkrBrAzj1itVtLpdKTf7zsjMAQT/OYQhm3aJy8bBvQyAPf7vQyCQaAUAqbgD0kBJjqdjp+BQiSANXgmz/O5EMblRCeXhgHzPJ/LZ8oBWIDQe5qmDmC5XMpkMpF+vy/9fl+azeanRFuWZSEDBgMAV6uVlGX5pWj4/eVyKYPBQIbDoQwGAxmNRjIej6Xb7c4dseyhLLbbrbRaLUnT1DmT53lpdrt1WXU8g4xY0jGPZk8RnYijBYCw47A0D7YnIqLyRaSRJMnZoQD9A10K2RDuoySMCSCW0eDzfD6XweHF9TYTZw8H9CKLjhVqGIMiWYhKFbDCm3xQ9yUbFg1hZBgxgdVnKd1Lw10/k+e5NBqN2nKrCXe0tXQ1JU4MDJxZVIghA9QIKxmAwvEol/V6Lc1m85ymqQuYGJwYvHDAFSUDAHUEPnEynVWaLBAy7jXC+xfXzAXG4aUg1v0NB1YiZAQOcI7NZjMXIxc7InqZtDHDFrJWq3VWMdI9jnUlQ5cNO84gAcZUGgAMhwBqOT3LsulyuZTJZCKj0ciPnhUYQzHCvgwMqWTjgwVY38MjpSwm+iRJLmVZyng8lvF4LMPhUEajkXQ6ndL2yoCw0ikGMa4A+E45jRFKsjyXJElkOp3KdDr1Mx6PpdPpFEBCQzZGnGwMHjHyiO05GrHzGiNpmp5hYj6fy2w2k8lkIoPBQNrt9nnR6FXQGHGysWBAGYkx4pjkCw36fD7LfD6X+Xwus9nM22K73a6vRmJ1b1nJZT32jBnhqvRypjw7nY602+1SRPSSxIhoWZcxgzJR5hCDWYnVdV26YvxYfx2G+QqMiF5h2M5gjHAYjmGE/+OYMf9+v5e6rpv1+SzD4VAGg4H0+31pt9syHA59xbhYLLxcZwHjiJiMGHhMnHqGC6fTaR4WiNWf7PK5XMhFCYcWuAJz9vHxIe/v7/L29ibv7+/y9vYmZVmWQxcIJ8DxWYELGOYMB+WwUNqbWo78/f1dXl9f5eXlRf78+SOvr6/y8fEhTZLI6XSSqqrcs3a7LXmey2KxcM/4OEcNUjbK9GQykZeXFz9//vwRsAMmOLxwVrgtcjmhXqeUwJFer+eZgRNY8OXlRZ6fn+Xp6UkeHx/l6elJnp+fpSAjfDYAsQDwm8sCnMnz3JngSz88A37jDI7gCPb4+voqj4+P8vv3b3l4eJCHhwd5eHiQx8dH+R8W4N1TiHsxSgAAAABJRU5ErkJggg==');
+  background-blend-mode: overlay;
+}
+
+.book {
+  min-height: 100vh;
+  background-color: var(--viking-parchment);
+  box-shadow: 0 0 50px rgba(0,0,0,0.3);
+}
+
+/* Navigations-panel */
+.sidebar {
+  font-family: 'Cinzel', serif;
+  background-color: var(--viking-parchment);
+  border-right: 3px solid var(--viking-brown);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAExElEQVRogZ2Zy3riMBCE1QZzY4PMjXDM+z/anuXgbMDYQEiA3TWVP661IxEOR4sT7Pb0VFdLZbVer02j0YjfSZL4b6PR8Pvdbpf8/O9/g4DUbrelqiqp69r/1/94L59JkkTqupaqqvz/UNJms5GqqiTLMkmSREXEn6Vp6vdqANqeZZm/q2XRfr+Xqqp8H4CK3+/3/o7ur9Vq/hygl99tNhvf/3q9erbkNxzQfqZpKuv12t9vt1tJ09QPr0EArxfrbxjQwCh9nudyPB5ltVr5PnSI9uCl37AoIDbbOKzr0N+GQbAWHJFhGJ7neb5YGmXDsGEQZxouhEp4lzDhRABo0CQwYAaHQbDYP2+32y8nlHkrBrAzj1itVtLpdKTf7zsjMAQT/OYQhm3aJy8bBvQyAPf7vQyCQaAUAqbgD0kBJjqdjp+BQiSANXgmz/O5EMblRCeXhgHzPJ/LZ8oBWIDQe5qmDmC5XMpkMpF+vy/9fl+azeanRFuWZSEDBgMAV6uVlGX5pWj4/eVyKYPBQIbDoQwGAxmNRjIej6Xb7c4dseyhLLbbrbRaLUnT1DmT53lpdrt1WXU8g4xY0jGPZk8RnYijBYCw47A0D7YnIqLyRaSRJMnZoQD9A10K2RDuoySMCSCW0eDzfD6XweHF9TYTZw8H9CKLjhVqGIMiWYhKFbDCm3xQ9yUbFg1hZBgxgdVnKd1Lw10/k+e5NBqN2nKrCXe0tXQ1JU4MDJxZVIghA9QIKxmAwvEol/V6Lc1m85ymqQuYGJwYvHDAFSUDAHUEPnEynVWaLBAy7jXC+xfXzAXG4aUg1v0NB1YiZAQOcI7NZjMXIxc7InqZtDHDFrJWq3VWMdI9jnUlQ5cNO84gAcZUGgAMhwBqOT3LsulyuZTJZCKj0ciPnhUYQzHCvgwMqWTjgwVY38MjpSwm+iRJLmVZyng8lvF4LMPhUEajkXQ6ndL2yoCw0ikGMa4A+E45jRFKsjyXJElkOp3KdDr1Mx6PpdPpFEBCQzZGnGwMHjHyiO05GrHzGiNpmp5hYj6fy2w2k8lkIoPBQNrt9nnR6FXQGHGysWBAGYkx4pjkCw36fD7LfD6X+Xwus9nM22K73a6vRmJ1b1nJZT32jBnhqvRypjw7nY602+1SRPSSxIhoWZcxgzJR5hCDWYnVdV26YvxYfx2G+QqMiF5h2M5gjHAYjmGE/+OYMf9+v5e6rpv1+SzD4VAGg4H0+31pt9syHA59xbhYLLxcZwHjiJiMGHhMnHqGC6fTaR4WiNWf7PK5XMhFCYcWuAJz9vHxIe/v7/L29ibv7+/y9vYmZVmWQxcIJ8DxWYELGOYMB+WwUNqbWo78/f1dXl9f5eXlRf78+SOvr6/y8fEhTZLI6XSSqqrcs3a7LXmey2KxcM/4OEcNUjbK9GQykZeXFz9//vwRsAMmOLxwVrgtcjmhXqeUwJFer+eZgRNY8OXlRZ6fn+Xp6UkeHx/l6elJnp+fpSAjfDYAsQDwm8sCnMnz3JngSz88A37jDI7gCPb4+voqj4+P8vv3b3l4eJCHhwd5eHiQx8dH+R8W4N1TiHsxSgAAAABJRU5ErkJggg==');
+  background-blend-mode: overlay;
+}
+
+.sidebar-scrollbox {
+  padding: 0;
+}
+
+.chapter {
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.chapter li.chapter-item {
+  margin: 0;
+  padding: 0;
+}
+
+.chapter li.chapter-item a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--viking-dark);
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  transition: all 0.3s;
+}
+
+.chapter li.chapter-item a:hover {
+  background-color: rgba(139, 69, 19, 0.1);
+  transform: translateX(5px);
+}
+
+.chapter li.chapter-item a.active {
+  color: var(--viking-red);
+  font-weight: bold;
+  background-color: rgba(139, 69, 19, 0.15);
+  border-left: 4px solid var(--viking-red);
+}
+
+.chapter li.chapter-item a.active:hover {
+  transform: none;
+}
+
+.chapter li.spacer {
+  height: 20px;
+}
+
+/* Indholdsfortegnelse */
+.section {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.section > a.header {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3em;
+  color: var(--viking-brown);
+  display: block;
+  padding: 8px 15px;
+  border-bottom: 2px solid var(--viking-gold);
+  margin-bottom: 10px;
+  text-shadow: var(--text-shadow);
+}
+
+/* Hovedindhold */
+.content {
+  padding: 0 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5 {
+  font-family: 'Cinzel', serif;
+  color: var(--viking-brown);
+  border-bottom: 2px solid var(--viking-gold);
+  padding-bottom: 10px;
+  margin: 40px 0 20px 0;
+  text-shadow: var(--text-shadow);
+}
+
+.content h1 {
+  font-size: 2.8em;
+  text-align: center;
+  color: var(--viking-red);
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--viking-gold);
+  padding-bottom: 15px;
+}
+
+.content h2 {
+  font-size: 2.2em;
+}
+
+.content h3 {
+  font-size: 1.8em;
+}
+
+.content h4 {
+  font-size: 1.5em;
+}
+
+.content a {
+  color: var(--viking-red);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.content a:hover {
+  color: var(--viking-brown);
+  text-decoration: underline;
+}
+
+.content p {
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.7;
+}
+
+.content p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  color: var(--viking-red);
+  font-family: 'Cinzel', serif;
+  padding-top: 0.1em;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+/* Dekorative elementer */
+.content::before, .content::after {
+  content: '';
+  display: block;
+  height: 20px;
+  margin: 40px 0;
+  background-image: url('../theme/svg/nordic-divider.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content blockquote {
+  margin: 40px 0;
+  padding: 20px 30px;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.3em;
+  position: relative;
+  color: var(--viking-brown);
+  background-color: rgba(244, 234, 213, 0.6);
+  border-left: 5px solid var(--viking-gold);
+  border-right: 5px solid var(--viking-gold);
+}
+
+.content blockquote::before,
+.content blockquote::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 40%;
+  height: 2px;
+  background-color: var(--viking-gold);
+  transform: translateX(-50%);
+}
+
+.content blockquote::before {
+  top: 10px;
+}
+
+.content blockquote::after {
+  bottom: 10px;
+}
+
+/* Tabeller */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: 1.1em;
+}
+
+.content table th {
+  background-color: var(--viking-brown);
+  color: var(--viking-light);
+  text-align: left;
+  padding: 15px;
+  font-family: 'Cinzel', serif;
+}
+
+.content table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+.content table tr:nth-child(even) {
+  background-color: rgba(244, 234, 213, 0.5);
+}
+
+/* Kode */
+.content pre {
+  padding: 20px;
+  background-color: var(--viking-dark);
+  color: var(--viking-light);
+  border-radius: 5px;
+  font-size: 1.1em;
+  overflow-x: auto;
+  border: 2px solid var(--viking-brown);
+}
+
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  background-color: rgba(139, 69, 19, 0.1);
+  border-radius: 3px;
+  color: var(--viking-brown);
+}
+
+/* Billeder */
+.content img {
+  max-width: 100%;
+  display: block;
+  margin: 30px auto;
+  border: 8px solid var(--viking-brown);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Navigation (pil-knapper) */
+.nav-chapters {
+  font-family: 'Cinzel', serif;
+  color: var(--viking-brown);
+  background-color: var(--viking-parchment);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.nav-chapters:hover {
+  color: var(--viking-red);
+  transform: scale(1.05);
+}
+
+/* Responsivt design */
+@media screen and (max-width: a768px) {
+  .book.font-size-0 .content {
+    padding: 20px;
+  }
+  
+  .content h1 {
+    font-size: 2.2em;
+  }
+  
+  .content h2 {
+    font-size: 1.8em;
+  }
+  
+  .content p {
+    font-size: 1.1em;
+  }
+}
+
+/* Downloadknapper */
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--viking-brown);
+  color: var(--viking-light);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+  background-color: var(--viking-red);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+/* Print-venlig stil */
+@media print {
+  body {
+    font-size: 12pt;
+    color: black;
+    background-color: white;
+  }
+  
+  .content blockquote {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+  
+  .content pre {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+  
+  .content img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+} 
