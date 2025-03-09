@@ -15,7 +15,7 @@
 
 /* Grundlæggende stil */
 body {
-  background-color: var(--viking-dark);
+  background-color: var(--viking-dark) !important;
   color: var(--viking-dark);
   font-family: 'EB Garamond', serif;
   line-height: 1.8;
@@ -23,9 +23,13 @@ body {
   background-blend-mode: overlay;
 }
 
+html, body, .book, .book-body, .page, .markdown-section {
+  background-color: var(--viking-parchment) !important;
+}
+
 .book {
   min-height: 100vh;
-  background-color: var(--viking-parchment);
+  background-color: var(--viking-parchment) !important;
   box-shadow: 0 0 50px rgba(0,0,0,0.3);
   position: relative;
 }
@@ -50,7 +54,7 @@ body {
 /* Navigations-panel */
 .sidebar {
   font-family: 'Cinzel', serif;
-  background-color: var(--viking-parchment);
+  background-color: var(--viking-parchment) !important;
   border-right: 3px solid var(--viking-brown);
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAExElEQVRogZ2Zy3riMBCE1QZzY4PMjXDM+z/anuXgbMDYQEiA3TWVP661IxEOR4sT7Pb0VFdLZbVer02j0YjfSZL4b6PR8Pvdbpf8/O9/g4DUbrelqiqp69r/1/94L59JkkTqupaqqvz/UNJms5GqqiTLMkmSREXEn6Vp6vdqANqeZZm/q2XRfr+Xqqp8H4CK3+/3/o7ur9Vq/hygl99tNhvf/3q9erbkNxzQfqZpKuv12t9vt1tJ09QPr0EArxfrbxjQwCh9nudyPB5ltVr5PnSI9uCl37AoIDbbOKzr0N+GQbAWHJFhGJ7neb5YGmXDsGEQZxouhEp4lzDhRABo0CQwYAaHQbDYP2+32y8nlHkrBrAzj1itVtLpdKTf7zsjMAQT/OYQhm3aJy8bBvQyAPf7vQyCQaAUAqbgD0kBJjqdjp+BQiSANXgmz/O5EMblRCeXhgHzPJ/LZ8oBWIDQe5qmDmC5XMpkMpF+vy/9fl+azeanRFuWZSEDBgMAV6uVlGX5pWj4/eVyKYPBQIbDoQwGAxmNRjIej6Xb7c4dseyhLLbbrbRaLUnT1DmT53lpdrt1WXU8g4xY0jGPZk8RnYijBYCw47A0D7YnIqLyRaSRJMnZoQD9A10K2RDuoySMCSCW0eDzfD6XweHF9TYTZw8H9CKLjhVqGIMiWYhKFbDCm3xQ9yUbFg1hZBgxgdVnKd1Lw10/k+e5NBqN2nKrCXe0tXQ1JU4MDJxZVIghA9QIKxmAwvEol/V6Lc1m85ymqQuYGJwYvHDAFSUDAHUEPnEynVWaLBAy7jXC+xfXzAXG4aUg1v0NB1YiZAQOcI7NZjMXIxc7InqZtDHDFrJWq3VWMdI9jnUlQ5cNO84gAcZUGgAMhwBqOT3LsulyuZTJZCKj0ciPnhUYQzHCvgwMqWTjgwVY38MjpSwm+iRJLmVZyng8lvF4LMPhUEajkXQ6ndL2yoCw0ikGMa4A+E45jRFKsjyXJElkOp3KdDr1Mx6PpdPpFEBCQzZGnGwMHjHyiO05GrHzGiNpmp5hYj6fy2w2k8lkIoPBQNrt9nnR6FXQGHGysWBAGYkx4pjkCw36fD7LfD6X+Xwus9nM22K73a6vRmJ1b1nJZT32jBnhqvRypjw7nY602+1SRPSSxIhoWZcxgzJR5hCDWYnVdV26YvxYfx2G+QqMiF5h2M5gjHAYjmGE/+OYMf9+v5e6rpv1+SzD4VAGg4H0+31pt9syHA59xbhYLLxcZwHjiJiMGHhMnHqGC6fTaR4WiNWf7PK5XMhFCYcWuAJz9vHxIe/v7/L29ibv7+/y9vYmZVmWQxcIJ8DxWYELGOYMB+WwUNqbWo78/f1dXl9f5eXlRf78+SOvr6/y8fEhTZLI6XSSqqrcs3a7LXmey2KxcM/4OEcNUjbK9GQykZeXFz9//vwRsAMmOLxwVrgtcjmhXqeUwJFer+eZgRNY8OXlRZ6fn+Xp6UkeHx/l6elJnp+fpSAjfDYAsQDwm8sCnMnz3JngSz88A37jDI7gCPb4+voqj4+P8vv3b3l4eJCHhwd5eHiQx8dH+R8W4N1TiHsxSgAAAABJRU5ErkJggg==');
   background-blend-mode: overlay;
@@ -123,17 +127,31 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  background-color: var(--viking-parchment) !important;
 }
 
 .content main {
   position: relative;
   z-index: 1;
-  background-color: rgba(244, 234, 213, 0.8);
+  background-color: var(--viking-parchment) !important;
   padding: 30px 40px;
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* mdBook specifikke overskrivninger */
+.page-wrapper {
+  background-color: var(--viking-parchment) !important;
+}
+
+.page {
+  background-color: var(--viking-parchment) !important;
+}
+
+#content {
+  background-color: var(--viking-parchment) !important;
 }
 
 .content h1, 
@@ -157,6 +175,21 @@ body {
   margin-bottom: 30px;
   border-bottom: 3px solid var(--viking-gold);
   padding-bottom: 15px;
+}
+
+/* Overskrift til titelsiden */
+main > h1:first-of-type {
+  font-size: 3.2em;
+  color: var(--viking-red) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Den store overskrift i midten af forsiden */
+main h1:nth-of-type(2) {
+  font-size: 3.8em;
+  color: var(--viking-brown) !important;
+  margin: 40px 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
 }
 
 .content h2 {
