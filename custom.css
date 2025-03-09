@@ -167,19 +167,17 @@ html, body, .book, .book-body, .page, .markdown-section {
   line-height: 1.6;
 }
 
-/* Skjul første store overskrift med metadata (vil blive erstattet af metadata-box) */
-.content main > h1:first-of-type,
-.content main > h2:first-of-type {
-  display: none;
-}
-
-/* Style den virkelige hovedoverskrift for siden */
-.content main > h1:nth-of-type(1) {
-  margin-top: 20px;
+/* Generel styling for alle H1 */
+.content main > h1 {
+  display: block !important; /* Tving visning af alle H1 */
+  margin-top: 30px;
   font-size: 2.5em;
   color: var(--viking-red);
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   text-align: center;
+  font-family: 'Cinzel', serif;
+  border-bottom: 2px solid var(--viking-gold);
+  padding-bottom: 10px;
 }
 
 /* Normale overskrifter */
@@ -194,6 +192,7 @@ html, body, .book, .book-body, .page, .markdown-section {
   padding-bottom: 10px;
   margin: 40px 0 20px 0;
   text-shadow: var(--text-shadow);
+  display: block !important; /* Sikrer at overskrifter altid vises */
 }
 
 .content h1 {
