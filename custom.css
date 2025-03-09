@@ -154,6 +154,35 @@ html, body, .book, .book-body, .page, .markdown-section {
   background-color: var(--viking-parchment) !important;
 }
 
+/* Metadata-box styling - erstatter de store overskrifter */
+.content main > p:first-of-type {
+  font-size: 1em;
+  background-color: rgba(244, 234, 213, 0.8);
+  border-left: 4px solid var(--viking-gold);
+  padding: 15px;
+  margin: 0 0 30px 0;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--viking-brown);
+  line-height: 1.6;
+}
+
+/* Skjul første store overskrift med metadata (vil blive erstattet af metadata-box) */
+.content main > h1:first-of-type,
+.content main > h2:first-of-type {
+  display: none;
+}
+
+/* Style den virkelige hovedoverskrift for siden */
+.content main > h1:nth-of-type(1) {
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: var(--viking-red);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Normale overskrifter */
 .content h1, 
 .content h2, 
 .content h3, 
@@ -168,28 +197,13 @@ html, body, .book, .book-body, .page, .markdown-section {
 }
 
 .content h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   text-align: center;
   color: var(--viking-red);
   margin-top: 20px;
   margin-bottom: 30px;
   border-bottom: 3px solid var(--viking-gold);
   padding-bottom: 15px;
-}
-
-/* Overskrift til titelsiden */
-main > h1:first-of-type {
-  font-size: 3.2em;
-  color: var(--viking-red) !important;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Den store overskrift i midten af forsiden */
-main h1:nth-of-type(2) {
-  font-size: 3.8em;
-  color: var(--viking-brown) !important;
-  margin: 40px 0;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
 }
 
 .content h2 {
@@ -221,7 +235,20 @@ main h1:nth-of-type(2) {
   line-height: 1.7;
 }
 
+/* Deaktiver første bogstav større på første paragraf, da den kan være metadata */
 .content p:first-of-type::first-letter {
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin-right: 0;
+  color: inherit;
+  font-family: inherit;
+  padding-top: 0;
+  text-shadow: none;
+}
+
+/* Men behold det på første paragraf EFTER h1 */
+.content h1 + p::first-letter {
   float: left;
   font-size: 3.5em;
   line-height: 0.8;
