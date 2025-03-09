@@ -1,0 +1,23 @@
+# Generated files
+/book/
+*.html
+/FontAwesome/
+/css/
+/fonts/
+*.css
+*.js
+*.json
+*.png
+*.svg
+*.ttf
+*.woff
+*.woff2
+*.eot
+/kapitel_1/*.html
+/kapitel_2/*.html
+/ressourcer/*.html
+.nojekyll
+404.html
+
+# Behold kildefiler
+!src/**/*.md 
