@@ -157,18 +157,51 @@ html, body, .book, .book-body, .page, .markdown-section {
 /* Metadata-box styling - erstatter de store overskrifter */
 .content main > .front-matter-container,
 .content main > p:first-of-type {
-  font-size: 1em;
+  font-size: 0.85em;
   background-color: rgba(244, 234, 213, 0.8);
   border-left: 4px solid var(--viking-gold);
-  padding: 15px;
-  margin: 0 0 30px 0;
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
+  padding: 12px;
+  margin: 0 0 25px 0;
+  font-family: 'Courier New', monospace;
   color: var(--viking-brown);
-  line-height: 1.6;
+  line-height: 1.4;
   white-space: pre-wrap;
   font-weight: normal;
   text-align: left;
+  opacity: 0.75;
+  max-width: 600px;
+  border-radius: 4px;
+  position: relative;
+  tab-size: 4;
+}
+
+/* Tilføj en lille metadata-label */
+.content main > .front-matter-container::before,
+.content main > p:first-of-type::before {
+  content: "Metadata 📋";
+  display: block;
+  font-size: 0.8em;
+  color: var(--viking-brown);
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed var(--viking-gold);
+  padding-bottom: 5px;
+}
+
+/* YAML formatering: fremhæv "nøgler" og "værdier" */
+.content main > .front-matter-container strong,
+.content main > p:first-of-type strong {
+  color: var(--viking-red);
+  font-weight: bold;
+}
+
+/* YAML formatering: fremhæv tags og lists */
+.content main > .front-matter-container em,
+.content main > p:first-of-type em {
+  color: var(--viking-brown);
+  font-style: normal;
+  font-weight: bold;
 }
 
 /* Stil for den virkelige H1 titel */
