@@ -1,10 +1,10 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Dette workflow er deaktiveret, da vi bruger deploy.yml i stedet
+name: Deploy static content to Pages (DEAKTIVERET)
 
 on:
-  # Runs on pushes targeting the default branch
+  # Dette workflow vil aldrig køre pga. betingelsen nedenfor
   push:
-    branches: ["main"]
+    branches: ["disabled-workflow"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
