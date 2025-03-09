@@ -18,62 +18,8 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
-
-      - name: Cache cargo
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
-
-      - name: Download mdBook PDF
-        run: |
-          mkdir -p "${HOME}/.cargo/bin"
-          curl -L https://github.com/HollowMan6/mdbook-pdf/releases/download/v0.1.51/mdbook-pdf-v0.1.51-x86_64-unknown-linux-gnu.tar.gz | tar xz -C "${HOME}/.cargo/bin"
-          chmod +x "${HOME}/.cargo/bin/mdbook-pdf"
-          mdbook-pdf --version
-
-      - name: Install EPUB dependencies
-        run: |
-          cargo install mdbook-epub
-
-      - name: Install Chrome for PDF generation
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
-
       - name: Build mdBook (HTML)
         run: mdbook build
-
-      - name: Build PDF version
-        run: |
-          mdbook-pdf ./ || echo "PDF generation failed but continuing"
-          if [ -f "book.pdf" ]; then
-            mkdir -p ./book/downloads
-            cp book.pdf ./book/downloads/
-            echo "PDF successfully generated and moved"
-          else
-            echo "PDF generation failed, but build will continue"
-          fi
-
-      - name: Build EPUB version
-        run: |
-          mdbook-epub ./ || echo "EPUB generation failed but continuing"
-          if [ -f "book.epub" ]; then
-            mkdir -p ./book/downloads
-            cp book.epub ./book/downloads/
-            echo "EPUB successfully generated and moved"
-          else
-            echo "EPUB generation failed, but build will continue"
-          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

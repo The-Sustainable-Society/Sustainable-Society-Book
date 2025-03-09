@@ -13,9 +13,13 @@ Du kan læse den nyeste version af bogen online på:
 
 ## Download Formater
 
+> **Bemærk:** PDF og EPUB download-formater er midlertidigt deaktiveret, mens vi arbejder på at forbedre vores build-proces. De vil blive tilføjet igen i en senere opdatering.
+
+<!-- 
 Bogen er også tilgængelig i følgende formater:
 - [PDF](https://the-sustainable-society.github.io/Sustainable-Society-Book/downloads/book.pdf)
 - [EPUB](https://the-sustainable-society.github.io/Sustainable-Society-Book/downloads/book.epub)
+-->
 
 ## Bidrag til Projektet
 

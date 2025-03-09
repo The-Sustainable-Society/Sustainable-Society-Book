@@ -16,14 +16,14 @@ curly-quotes = true
 mathjax-support = true
 copy-fonts = true
 
-# Tilføj download-knapper i navigationsmenu
-[output.html.navbar]
-additional-items = [
-    { text = "📥 Download", nested = [
-        { text = "📄 PDF", url = "downloads/book.pdf" },
-        { text = "📱 EPUB", url = "downloads/book.epub" }
-    ]}
-]
+# Note: Download links temporarily disabled - vil blive tilføjet senere
+# [output.html.navbar]
+# additional-items = [
+#    { text = "📥 Download", nested = [
+#        { text = "📄 PDF", url = "downloads/book.pdf" },
+#        { text = "📱 EPUB", url = "downloads/book.epub" }
+#    ]}
+# ]
 
 [output.html.playground]
 editable = true
@@ -41,16 +41,17 @@ boost-paragraph = 1
 expand = true
 heading-split-level = 3
 
-[output.epub]
-additional-css = ["custom.css"]
-cover-image = "theme/cover.jpg"
-use-default-css = true
-toc-depth = 4
-curly-quotes = true
+# Note: EPUB og PDF outputs er midlertidigt deaktiveret
+# [output.epub]
+# additional-css = ["custom.css"]
+# cover-image = "theme/cover.jpg"
+# use-default-css = true
+# toc-depth = 4
+# curly-quotes = true
 
-[output.pdf]
-paper-size = "a4"
-margin-left = 1.5
-margin-right = 1.5
-margin-top = 1.5
-margin-bottom = 1.5 
+# [output.pdf]
+# paper-size = "a4"
+# margin-left = 1.5
+# margin-right = 1.5
+# margin-top = 1.5
+# margin-bottom = 1.5 
