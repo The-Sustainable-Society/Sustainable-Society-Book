@@ -1,0 +1,12 @@
+---
+description: freja site Github
+globs: 
+alwaysApply: false
+---
+
+# Freja Site
+
+- The site content language is British English
+- The site is a Githup Pages Site
+- The site must be automated by Github Actions
+- We program in whats needed for Github

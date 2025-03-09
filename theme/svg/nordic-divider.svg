@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="50px" viewBox="0 0 600 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Nordic Divider</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <line x1="50" y1="25" x2="550" y2="25" stroke="#8B4513" stroke-width="3" />
+        
+        <!-- Rune: Ansuz (Odin/Aesir) -->
+        <path d="M180,10 L180,40 M180,10 L200,10 M180,25 L200,25" stroke="#8B2323" stroke-width="3" />
+        
+        <!-- Rune: Fehu (Wealth) -->
+        <path d="M230,10 L230,40 M230,10 L250,20 M230,25 L245,30" stroke="#8B2323" stroke-width="3" />
+        
+        <!-- Rune: Jera (Harvest) -->
+        <path d="M280,10 L290,25 M290,10 L280,25 M280,25 L290,40 M290,25 L280,40" stroke="#8B2323" stroke-width="3" />
+        
+        <!-- Rune: Algiz (Protection) -->
+        <path d="M330,40 L330,20 L320,10 M330,20 L340,10" stroke="#8B2323" stroke-width="3" />
+        
+        <!-- Decorative elements -->
+        <circle cx="100" cy="25" r="10" stroke="#DAA520" stroke-width="2" />
+        <circle cx="100" cy="25" r="5" fill="#DAA520" />
+        
+        <circle cx="500" cy="25" r="10" stroke="#DAA520" stroke-width="2" />
+        <circle cx="500" cy="25" r="5" fill="#DAA520" />
+        
+        <path d="M380,15 L390,25 L380,35" stroke="#8B4513" stroke-width="2" fill="none" />
+        <path d="M420,15 L410,25 L420,35" stroke="#8B4513" stroke-width="2" fill="none" />
+    </g>
+</svg> 

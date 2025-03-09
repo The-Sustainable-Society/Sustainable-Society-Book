@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Mediterranean Border</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Main background element -->
+        <rect x="0" y="40" width="800" height="20" fill="#1E90FF" opacity="0.6" />
+        
+        <!-- Greek meander/key pattern -->
+        <path d="M0,40 L20,40 L20,30 L40,30 L40,40 L60,40 L60,30 L80,30 L80,40 L100,40 L100,30 L120,30 L120,40 L140,40 L140,30 L160,30 L160,40 L180,40 L180,30 L200,30 L200,40 L220,40 L220,30 L240,30 L240,40 L260,40 L260,30 L280,30 L280,40 L300,40 L300,30 L320,30 L320,40 L340,40 L340,30 L360,30 L360,40 L380,40 L380,30 L400,30 L400,40 L420,40 L420,30 L440,30 L440,40 L460,40 L460,30 L480,30 L480,40 L500,40 L500,30 L520,30 L520,40 L540,40 L540,30 L560,30 L560,40 L580,40 L580,30 L600,30 L600,40 L620,40 L620,30 L640,30 L640,40 L660,40 L660,30 L680,30 L680,40 L700,40 L700,30 L720,30 L720,40 L740,40 L740,30 L760,30 L760,40 L780,40 L780,30 L800,30" stroke="#4169E1" stroke-width="2" />
+        
+        <!-- Olive branch pattern -->
+        <path d="M50,60 C60,55 70,50 80,55 C90,60 100,65 110,60 M80,55 C85,50 85,45 80,40 M110,60 C115,55 115,50 110,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M150,60 C160,55 170,50 180,55 C190,60 200,65 210,60 M180,55 C185,50 185,45 180,40 M210,60 C215,55 215,50 210,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M250,60 C260,55 270,50 280,55 C290,60 300,65 310,60 M280,55 C285,50 285,45 280,40 M310,60 C315,55 315,50 310,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M350,60 C360,55 370,50 380,55 C390,60 400,65 410,60 M380,55 C385,50 385,45 380,40 M410,60 C415,55 415,50 410,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M450,60 C460,55 470,50 480,55 C490,60 500,65 510,60 M480,55 C485,50 485,45 480,40 M510,60 C515,55 515,50 510,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M550,60 C560,55 570,50 580,55 C590,60 600,65 610,60 M580,55 C585,50 585,45 580,40 M610,60 C615,55 615,50 610,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M650,60 C660,55 670,50 680,55 C690,60 700,65 710,60 M680,55 C685,50 685,45 680,40 M710,60 C715,55 715,50 710,45" stroke="#556B2F" stroke-width="1.5" />
+        <path d="M750,60 C760,55 770,50 780,55 C790,60 800,65 800,60 M780,55 C785,50 785,45 780,40" stroke="#556B2F" stroke-width="1.5" />
+        
+        <!-- Circular rosettes - inspired by Greek and Roman architectural ornaments -->
+        <g>
+            <circle cx="50" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M50,62 L50,78 M42,70 L58,70 M45,65 L55,75 M55,65 L45,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="150" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M150,62 L150,78 M142,70 L158,70 M145,65 L155,75 M155,65 L145,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="250" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M250,62 L250,78 M242,70 L258,70 M245,65 L255,75 M255,65 L245,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="350" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M350,62 L350,78 M342,70 L358,70 M345,65 L355,75 M355,65 L345,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="450" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M450,62 L450,78 M442,70 L458,70 M445,65 L455,75 M455,65 L445,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="550" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M550,62 L550,78 M542,70 L558,70 M545,65 L555,75 M555,65 L545,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="650" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M650,62 L650,78 M642,70 L658,70 M645,65 L655,75 M655,65 L645,75" stroke="#B8860B" stroke-width="1" />
+            
+            <circle cx="750" cy="70" r="8" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+            <path d="M750,62 L750,78 M742,70 L758,70 M745,65 L755,75 M755,65 L745,75" stroke="#B8860B" stroke-width="1" />
+        </g>
+    </g>
+</svg> 

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frejas Visdom - Kulturelle Temaer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+
+        :root {
+            --nordic-red: #8B2323;
+            --african-terracotta: #CD5C5C;
+            --asian-burgundy: #800020;
+            --med-blue: #1E90FF;
+            --background: #1D1D1D;
+            --text: #F5F5F5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        p.subtitle {
+            font-size: 1.6rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .theme-card {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .theme-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s;
+        }
+
+        .theme-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .theme-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 30px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .theme-card:hover .theme-overlay {
+            padding-bottom: 50px;
+        }
+
+        .theme-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .theme-description {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        .theme-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Cinzel', serif;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin-right: 10px;
+        }
+
+        .nordic .theme-title {
+            color: var(--nordic-red);
+        }
+        .nordic .theme-button {
+            background-color: var(--nordic-red);
+        }
+        .nordic .theme-button:hover {
+            background-color: #6B1A1A;
+        }
+
+        .african .theme-title {
+            color: var(--african-terracotta);
+        }
+        .african .theme-button {
+            background-color: var(--african-terracotta);
+        }
+        .african .theme-button:hover {
+            background-color: #A84848;
+        }
+
+        .asian .theme-title {
+            color: var(--asian-burgundy);
+        }
+        .asian .theme-button {
+            background-color: var(--asian-burgundy);
+        }
+        .asian .theme-button:hover {
+            background-color: #600018;
+        }
+
+        .mediterranean .theme-title {
+            color: var(--med-blue);
+        }
+        .mediterranean .theme-button {
+            background-color: var(--med-blue);
+        }
+        .mediterranean .theme-button:hover {
+            background-color: #1670CD;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 900px) {
+            .themes-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            p.subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .theme-card {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frejas Visdom</h1>
+        <p class="subtitle">Udforsk gudinden Frejas visdom gennem forskellige kulturelle perspektiver</p>
+    </header>
+
+    <div class="themes-grid">
+        <div class="theme-card nordic">
+            <img src="img/freya.jpg" alt="Nordisk Tema">
+            <div class="theme-overlay">
+                <h2 class="theme-title">Nordisk Tradition</h2>
+                <p class="theme-description">Oplev Frejas visdom gennem vikingernes æstetik og nordiske middelalderbogens format. Træskærerstil og runer skaber en autentisk nordisk oplevelse.</p>
+                <a href="index.html" class="theme-button"><i class="fas fa-dragon"></i> Udforsk</a>
+            </div>
+        </div>
+
+        <div class="theme-card african">
+            <img src="img/DALL·E 2025-03-09 20.08.30 - An ancient Norse-style illustration of the goddess Freya in a sustainable society context. The artwork resembles old Norse wood carvings or rune stone.webp" alt="Afrikansk Tema">
+            <div class="theme-overlay">
+                <h2 class="theme-title">Afrikansk Fortælling</h2>
+                <p class="theme-description">Mød Freja gennem afrikanske symboler og fortælletraditioner. Adinkra-symboler og ubuntus fællesskabsånd skaber en unik afrikansk tolkning af hendes lære.</p>
+                <a href="african.html" class="theme-button"><i class="fas fa-drum"></i> Udforsk</a>
+            </div>
+        </div>
+
+        <div class="theme-card asian">
+            <img src="img/DALL·E 2025-03-09 20.18.41 - A simplified website mockup inspired by ancient Norse and medieval manuscript design, themed around the Norse goddess Freya. The layout is clean and s.webp" alt="Asiatisk Tema">
+            <div class="theme-overlay">
+                <h2 class="theme-title">Østens Filosofi</h2>
+                <p class="theme-description">Opdag Frejas lære formet af asiatisk filosofi og æstetik. Kalligrafi, harmonilære og yin-yang-balance skaber en østlig fortolkning af nordisk visdom.</p>
+                <a href="asian.html" class="theme-button"><i class="fas fa-yin-yang"></i> Udforsk</a>
+            </div>
+        </div>
+
+        <div class="theme-card mediterranean">
+            <img src="img/DALL·E 2025-03-09 20.19.43 - A website mockup in the style of ancient Norse and medieval manuscript design, themed around 'The Sustainable Society – A Systemic Approach'. The layo.webp" alt="Mediterrant Tema">
+            <div class="theme-overlay">
+                <h2 class="theme-title">Middelhavets Codex</h2>
+                <p class="theme-description">Følg Frejas visdom inspireret af græsk filosofi og romersk æstetik. Klassiske søjler, laurbærkranse og filosofiske begreber forener nordisk og mediterran tradition.</p>
+                <a href="mediterranean.html" class="theme-button"><i class="fas fa-columns"></i> Udforsk</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Frejas Visdom - Kulturelle Fortolkninger © 2025</p>
+    </footer>
+</body>
+</html> 

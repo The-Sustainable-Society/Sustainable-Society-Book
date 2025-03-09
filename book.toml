@@ -1,0 +1,56 @@
+[book]
+title = "The Sustainable Society"
+authors = ["Lars"]
+description = "The Sustainable Society – A Systemic Approach"
+language = "da"
+src = "src"
+
+[output.html]
+site-url = "/Sustainable-Society-Book/"
+git-repository-url = "https://github.com/The-Sustainable-Society/Sustainable-Society-Book"
+edit-url-template = "https://github.com/The-Sustainable-Society/Sustainable-Society-Book/edit/main/{path}"
+additional-css = ["custom.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"
+curly-quotes = true
+mathjax-support = true
+copy-fonts = true
+
+# Tilføj download-knapper i navigationsmenu
+[output.html.navbar]
+additional-items = [
+    { text = "📥 Download", nested = [
+        { text = "📄 PDF", url = "downloads/book.pdf" },
+        { text = "📱 EPUB", url = "downloads/book.epub" }
+    ]}
+]
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+
+[output.html.search]
+enable = true
+limit-results = 30
+teaser-word-count = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
+
+[output.epub]
+additional-css = ["custom.css"]
+cover-image = "theme/cover.jpg"
+use-default-css = true
+toc-depth = 4
+curly-quotes = true
+
+[output.pdf]
+paper-size = "a4"
+margin-left = 1.5
+margin-right = 1.5
+margin-top = 1.5
+margin-bottom = 1.5 

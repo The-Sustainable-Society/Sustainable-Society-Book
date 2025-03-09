@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>African Border</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Main base line -->
+        <rect x="0" y="40" width="800" height="20" fill="#CD853F" />
+        
+        <!-- Traditional zigzag pattern -->
+        <path d="M0,30 L40,30 L50,10 L70,50 L90,10 L110,50 L130,10 L150,50 L170,10 L190,50 L210,10 L230,50 L250,10 L270,50 L290,10 L310,50 L330,10 L350,50 L370,10 L390,50 L410,10 L430,50 L450,10 L470,50 L490,10 L510,50 L530,10 L550,50 L570,10 L590,50 L610,10 L630,50 L650,10 L670,50 L690,10 L710,50 L730,10 L750,50 L770,10 L790,50 L800,30" stroke="#A0522D" stroke-width="4" fill="#D2691E" />
+        
+        <!-- Circular Adinkra-inspired symbols -->
+        <g fill="#800000">
+            <circle cx="50" cy="50" r="8" />
+            <circle cx="150" cy="50" r="8" />
+            <circle cx="250" cy="50" r="8" />
+            <circle cx="350" cy="50" r="8" />
+            <circle cx="450" cy="50" r="8" />
+            <circle cx="550" cy="50" r="8" />
+            <circle cx="650" cy="50" r="8" />
+            <circle cx="750" cy="50" r="8" />
+        </g>
+        
+        <!-- Mud cloth pattern elements -->
+        <g fill="#8B4513">
+            <rect x="80" y="45" width="10" height="10" />
+            <rect x="180" y="45" width="10" height="10" />
+            <rect x="280" y="45" width="10" height="10" />
+            <rect x="380" y="45" width="10" height="10" />
+            <rect x="480" y="45" width="10" height="10" />
+            <rect x="580" y="45" width="10" height="10" />
+            <rect x="680" y="45" width="10" height="10" />
+        </g>
+        
+        <!-- Diamond patterns - inspired by Kente cloth -->
+        <g fill="#FF8C00">
+            <path d="M100,35 L110,45 L100,55 L90,45 Z" />
+            <path d="M200,35 L210,45 L200,55 L190,45 Z" />
+            <path d="M300,35 L310,45 L300,55 L290,45 Z" />
+            <path d="M400,35 L410,45 L400,55 L390,45 Z" />
+            <path d="M500,35 L510,45 L500,55 L490,45 Z" />
+            <path d="M600,35 L610,45 L600,55 L590,45 Z" />
+            <path d="M700,35 L710,45 L700,55 L690,45 Z" />
+        </g>
+    </g>
+</svg> 

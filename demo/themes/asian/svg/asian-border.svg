@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Asian Border</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Main background element -->
+        <rect x="0" y="40" width="800" height="20" fill="#B22222" />
+        
+        <!-- Cloud pattern along the top -->
+        <path d="M0,40 C20,30 40,20 60,30 C80,40 100,30 120,20 C140,10 160,20 180,30 C200,40 220,30 240,20 C260,10 280,20 300,30 C320,40 340,30 360,20 C380,10 400,20 420,30 C440,40 460,30 480,20 C500,10 520,20 540,30 C560,40 580,30 600,20 C620,10 640,20 660,30 C680,40 700,30 720,20 C740,10 760,20 780,30 C790,35 795,38 800,40" stroke="#DAA520" stroke-width="3" fill="#FFF5EE" />
+        
+        <!-- Chinese knot patterns -->
+        <g fill="#B22222">
+            <path d="M50,50 L70,50 L70,70 L50,70 Z M60,40 L60,80 M40,60 L80,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M150,50 L170,50 L170,70 L150,70 Z M160,40 L160,80 M140,60 L180,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M250,50 L270,50 L270,70 L250,70 Z M260,40 L260,80 M240,60 L280,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M350,50 L370,50 L370,70 L350,70 Z M360,40 L360,80 M340,60 L380,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M450,50 L470,50 L470,70 L450,70 Z M460,40 L460,80 M440,60 L480,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M550,50 L570,50 L570,70 L550,70 Z M560,40 L560,80 M540,60 L580,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M650,50 L670,50 L670,70 L650,70 Z M660,40 L660,80 M640,60 L680,60" stroke="#DAA520" stroke-width="2" fill="none" />
+            <path d="M750,50 L770,50 L770,70 L750,70 Z M760,40 L760,80 M740,60 L780,60" stroke="#DAA520" stroke-width="2" fill="none" />
+        </g>
+        
+        <!-- Wave pattern along the bottom -->
+        <path d="M0,60 C20,70 40,80 60,70 C80,60 100,70 120,80 C140,90 160,80 180,70 C200,60 220,70 240,80 C260,90 280,80 300,70 C320,60 340,70 360,80 C380,90 400,80 420,70 C440,60 460,70 480,80 C500,90 520,80 540,70 C560,60 580,70 600,80 C620,90 640,80 660,70 C680,60 700,70 720,80 C740,90 760,80 780,70 C790,65 795,62 800,60" stroke="#8B0000" stroke-width="2" fill="#FFF5EE" />
+        
+        <!-- Dot elements inspired by Japanese mon -->
+        <g fill="#000000">
+            <circle cx="100" cy="60" r="4" />
+            <circle cx="200" cy="60" r="4" />
+            <circle cx="300" cy="60" r="4" />
+            <circle cx="400" cy="60" r="4" />
+            <circle cx="500" cy="60" r="4" />
+            <circle cx="600" cy="60" r="4" />
+            <circle cx="700" cy="60" r="4" />
+        </g>
+    </g>
+</svg> 

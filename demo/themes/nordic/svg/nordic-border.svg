@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Nordic Border</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,50 C50,20 100,80 150,50 C200,20 250,80 300,50 C350,20 400,80 450,50 C500,20 550,80 600,50 C650,20 700,80 750,50 C770,40 785,40 800,50" stroke="#8B4513" stroke-width="5"></path>
+        <path d="M10,60 L30,40 L50,60 L70,40 L90,60 L110,40 L130,60 L150,40 L170,60 L190,40 L210,60 L230,40 L250,60 L270,40 L290,60 L310,40 L330,60 L350,40 L370,60 L390,40 L410,60 L430,40 L450,60 L470,40 L490,60 L510,40 L530,60 L550,40 L570,60 L590,40 L610,60 L630,40 L650,60 L670,40 L690,60 L710,40 L730,60 L750,40 L770,60 L790,40" stroke="#DAA520" stroke-width="3"></path>
+        <circle cx="50" cy="50" r="8" fill="#8B2323" />
+        <circle cx="150" cy="50" r="8" fill="#8B2323" />
+        <circle cx="250" cy="50" r="8" fill="#8B2323" />
+        <circle cx="350" cy="50" r="8" fill="#8B2323" />
+        <circle cx="450" cy="50" r="8" fill="#8B2323" />
+        <circle cx="550" cy="50" r="8" fill="#8B2323" />
+        <circle cx="650" cy="50" r="8" fill="#8B2323" />
+        <circle cx="750" cy="50" r="8" fill="#8B2323" />
+    </g>
+</svg> 

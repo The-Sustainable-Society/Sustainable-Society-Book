@@ -1,0 +1,320 @@
+/* Viking Theme CSS - Nordisk Middelalder Bog Layout */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --viking-brown: #8B4513;
+  --viking-red: #8B2323;
+  --viking-gold: #DAA520;
+  --viking-dark: #2F1D1A;
+  --viking-light: #F5E8C7;
+  --viking-parchment: #F4EAD5;
+  --border-ornament: 30px;
+  --text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--viking-dark);
+  color: var(--viking-dark);
+  font-family: 'EB Garamond', serif;
+  line-height: 1.8;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../img/freya.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.book-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  perspective: 2000px;
+}
+
+.book {
+  position: relative;
+  background-color: var(--viking-parchment);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transform-style: preserve-3d;
+  transform: rotateX(5deg);
+  transition: transform 0.5s;
+  background-image: url('../img/DALL·E\ 2025-03-09\ 20.08.30\ -\ An\ ancient\ Norse-style\ illustration\ of\ the\ goddess\ Freya\ in\ a\ sustainable\ society\ context.\ The\ artwork\ resembles\ old\ Norse\ wood\ carvings\ or\ rune\ stone.webp');
+  background-size: cover;
+  background-blend-mode: overlay;
+  opacity: 0.95;
+}
+
+.book:hover {
+  transform: rotateX(0deg);
+}
+
+.book:before, .book:after {
+  content: "";
+  position: absolute;
+  top: var(--border-ornament);
+  left: var(--border-ornament);
+  right: var(--border-ornament);
+  bottom: var(--border-ornament);
+  border: 3px solid var(--viking-brown);
+  pointer-events: none;
+}
+
+.book:before {
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--viking-gold),
+    var(--viking-gold) 10px,
+    var(--viking-brown) 10px,
+    var(--viking-brown) 20px
+  ) 10;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  background-color: rgba(244, 234, 213, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: 3px solid var(--viking-red);
+  padding-bottom: 20px;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  color: var(--viking-red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--viking-brown);
+  text-shadow: var(--text-shadow);
+}
+
+.rune-divider {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: var(--viking-brown);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 8px solid var(--viking-brown);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(47, 29, 26, 0.9);
+  color: var(--viking-light);
+  padding: 15px;
+  font-style: italic;
+  font-size: 1.2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  color: var(--viking-brown);
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--viking-gold);
+  padding-bottom: 15px;
+  text-shadow: var(--text-shadow);
+}
+
+p {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: left;
+  column-count: 1;
+  column-gap: 40px;
+  color: #000000;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.initial-letter {
+  float: left;
+  font-size: 5em;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  color: var(--viking-red);
+  font-family: 'Cinzel', serif;
+  padding-top: 0.1em;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 40px auto;
+  max-width: 90%;
+  color: var(--viking-brown);
+  padding: 20px;
+  border-left: 5px solid var(--viking-gold);
+  border-right: 5px solid var(--viking-gold);
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: var(--text-shadow);
+}
+
+.ornament {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-image: url('../img/DALL·E\ 2025-03-09\ 20.18.41\ -\ A\ simplified\ website\ mockup\ inspired\ by\ ancient\ Norse\ and\ medieval\ manuscript\ design\,\ themed\ around\ the\ Norse\ goddess\ Freya.\ The\ layout\ is\ clean\ and\ s.webp');
+  background-size: contain;
+  background-position: center;
+  margin: 20px 0;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: var(--viking-brown);
+  border-top: 2px solid var(--viking-gold);
+  padding-top: 20px;
+}
+
+/* Runeknap/icon styling */
+.rune-button {
+  background-color: var(--viking-brown);
+  color: var(--viking-light);
+  border: none;
+  padding: 15px 25px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.rune-button:hover {
+  background-color: var(--viking-red);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsivt design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+  
+  .content {
+    padding: 25px;
+  }
+  
+  .book {
+    padding: 25px;
+  }
+  
+  .book:before, .book:after {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .quote {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tilføjet større skærm-tilpasning for bedre læsbarhed på større skærme */
+@media (min-width: 1200px) {
+  .book-container {
+    max-width: 1200px;
+  }
+  
+  .content {
+    padding: 60px;
+  }
+  
+  p {
+    margin-bottom: 30px;
+  }
+} 

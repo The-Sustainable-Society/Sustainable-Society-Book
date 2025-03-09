@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="50px" viewBox="0 0 600 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Mediterranean Divider</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Main line -->
+        <line x1="50" y1="25" x2="550" y2="25" stroke="#1E90FF" stroke-width="3" />
+        
+        <!-- Central laurel wreath -->
+        <g transform="translate(300, 25)">
+            <circle cx="0" cy="0" r="15" fill="#F5DEB3" opacity="0.7" />
+            
+            <!-- Left laurel branch -->
+            <path d="M-1,-15 C-10,-12 -15,-5 -15,0 C-15,5 -10,12 -1,15" stroke="#556B2F" stroke-width="1.5" fill="none" />
+            <path d="M-5,-13 C-5,-10 -7,-8 -10,-7 M-5,-8 C-5,-5 -7,-3 -10,-2 M-5,-3 C-5,0 -7,2 -10,3 M-5,2 C-5,5 -7,7 -10,8 M-5,7 C-5,10 -7,12 -10,13" stroke="#556B2F" stroke-width="1" />
+            
+            <!-- Right laurel branch -->
+            <path d="M1,-15 C10,-12 15,-5 15,0 C15,5 10,12 1,15" stroke="#556B2F" stroke-width="1.5" fill="none" />
+            <path d="M5,-13 C5,-10 7,-8 10,-7 M5,-8 C5,-5 7,-3 10,-2 M5,-3 C5,0 7,2 10,3 M5,2 C5,5 7,7 10,8 M5,7 C5,10 7,12 10,13" stroke="#556B2F" stroke-width="1" />
+        </g>
+        
+        <!-- Greek Lowercase Alpha symbol -->
+        <path d="M210,35 C200,35 195,25 200,20 C205,15 215,15 220,20 L215,35 M200,20 L220,20" stroke="#4169E1" stroke-width="2" fill="none" />
+        
+        <!-- Greek Lowercase Omega symbol -->
+        <path d="M240,35 L250,35 C245,25 245,15 250,15 C255,15 260,20 260,25 C260,30 255,35 250,35 L260,35" stroke="#4169E1" stroke-width="2" fill="none" />
+        
+        <!-- Greek column (Doric style) -->
+        <g transform="translate(130, 25)">
+            <rect x="-6" y="-15" width="12" height="3" fill="#B8860B" />
+            <rect x="-5" y="-12" width="10" height="22" fill="#F5DEB3" stroke="#B8860B" stroke-width="1" />
+            <rect x="-7" y="10" width="14" height="5" fill="#B8860B" />
+            <line x1="-5" y1="-12" x2="-5" y2="10" stroke="#B8860B" stroke-width="0.5" />
+            <line x1="0" y1="-12" x2="0" y2="10" stroke="#B8860B" stroke-width="0.5" />
+            <line x1="5" y1="-12" x2="5" y2="10" stroke="#B8860B" stroke-width="0.5" />
+        </g>
+        
+        <!-- Greek column (Doric style) -->
+        <g transform="translate(470, 25)">
+            <rect x="-6" y="-15" width="12" height="3" fill="#B8860B" />
+            <rect x="-5" y="-12" width="10" height="22" fill="#F5DEB3" stroke="#B8860B" stroke-width="1" />
+            <rect x="-7" y="10" width="14" height="5" fill="#B8860B" />
+            <line x1="-5" y1="-12" x2="-5" y2="10" stroke="#B8860B" stroke-width="0.5" />
+            <line x1="0" y1="-12" x2="0" y2="10" stroke="#B8860B" stroke-width="0.5" />
+            <line x1="5" y1="-12" x2="5" y2="10" stroke="#B8860B" stroke-width="0.5" />
+        </g>
+        
+        <!-- Greek amphora (vessel) -->
+        <path d="M370,10 C372,10 375,12 375,15 C375,25 380,30 380,35 C380,40 375,40 370,40 C365,40 360,40 360,35 C360,30 365,25 365,15 C365,12 368,10 370,10 Z" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+        <path d="M365,12 L360,5 M375,12 L380,5" stroke="#B8860B" stroke-width="1" />
+        
+        <!-- Decorative elements - Rosettes -->
+        <circle cx="90" cy="25" r="5" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+        <path d="M90,20 L90,30 M85,25 L95,25 M87,22 L93,28 M93,22 L87,28" stroke="#B8860B" stroke-width="0.5" />
+        
+        <circle cx="510" cy="25" r="5" stroke="#B8860B" stroke-width="1" fill="#F5DEB3" />
+        <path d="M510,20 L510,30 M505,25 L515,25 M507,22 L513,28 M513,22 L507,28" stroke="#B8860B" stroke-width="0.5" />
+    </g>
+</svg> 
