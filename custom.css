@@ -155,6 +155,7 @@ html, body, .book, .book-body, .page, .markdown-section {
 }
 
 /* Metadata-box styling - erstatter de store overskrifter */
+.content main > .front-matter-container,
 .content main > p:first-of-type {
   font-size: 1em;
   background-color: rgba(244, 234, 213, 0.8);
@@ -165,13 +166,16 @@ html, body, .book, .book-body, .page, .markdown-section {
   font-style: italic;
   color: var(--viking-brown);
   line-height: 1.6;
+  white-space: pre-wrap;
+  font-weight: normal;
+  text-align: left;
 }
 
-/* Generel styling for alle H1 */
+/* Stil for den virkelige H1 titel */
 .content main > h1 {
   display: block !important; /* Tving visning af alle H1 */
   margin-top: 30px;
-  font-size: 2.5em;
+  font-size: 2.8em;
   color: var(--viking-red);
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   text-align: center;
@@ -180,7 +184,17 @@ html, body, .book, .book-body, .page, .markdown-section {
   padding-bottom: 10px;
 }
 
-/* Normale overskrifter */
+/* Stil for kursiv undertitel efter H1 */
+.content main > h1 + p > em:first-child {
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 15px 0 40px 0;
+  color: var(--viking-brown);
+  font-family: 'EB Garamond', serif;
+}
+
+/* Normale overskrifter - men sørg for at H1 har en større margin-top for at adskille det fra metadata */
 .content h1, 
 .content h2, 
 .content h3, 
@@ -195,11 +209,12 @@ html, body, .book, .book-body, .page, .markdown-section {
   display: block !important; /* Sikrer at overskrifter altid vises */
 }
 
+/* Specifik stil for hovedoverskrift H1 */
 .content h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   text-align: center;
   color: var(--viking-red);
-  margin-top: 20px;
+  margin-top: 40px; /* Større margin-top for at adskille fra metadata */
   margin-bottom: 30px;
   border-bottom: 3px solid var(--viking-gold);
   padding-bottom: 15px;
@@ -234,7 +249,7 @@ html, body, .book, .book-body, .page, .markdown-section {
   line-height: 1.7;
 }
 
-/* Deaktiver første bogstav større på første paragraf, da den kan være metadata */
+/* Deaktiver første bogstav større på YAML frontmatter */
 .content p:first-of-type::first-letter {
   float: none;
   font-size: inherit;
@@ -246,7 +261,7 @@ html, body, .book, .book-body, .page, .markdown-section {
   text-shadow: none;
 }
 
-/* Men behold det på første paragraf EFTER h1 */
+/* Aktiver første bogstav større på første paragraf efter H1 */
 .content h1 + p::first-letter {
   float: left;
   font-size: 3.5em;
