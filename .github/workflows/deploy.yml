@@ -28,10 +28,10 @@ jobs:
       - name: Installer mdBook PDF og EPUB plugins
         run: |
           # Installer mdBook PDF
-          cargo install mdbook-pdf --vers $(cargo search mdbook-pdf --limit 1 | grep -o "v[0-9.]*" | tr -d 'v')
+          cargo install mdbook-pdf
           
           # Installer mdBook EPUB
-          cargo install mdbook-epub --vers $(cargo search mdbook-epub --limit 1 | grep -o "v[0-9.]*" | tr -d 'v')
+          cargo install mdbook-epub
 
       - name: Installer afhængigheder for PDF-generering
         run: |
