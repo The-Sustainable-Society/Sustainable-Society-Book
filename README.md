@@ -63,4 +63,4 @@ Dette projekt er udgivet under [Creative Commons Attribution 4.0 International L
 
 ## Kontakt
 
-Hvis du har spørgsmål eller forslag, er du velkommen til at kontakte os via GitHub issues. 
+Hvis du har spørgsmål eller forslag, er du velkommen til at kontakte os via GitHub issues.
