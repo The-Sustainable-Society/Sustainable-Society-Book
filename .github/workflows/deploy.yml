@@ -25,30 +25,31 @@ jobs:
           profile: minimal
           override: true
 
-      - name: Installer mdBook PDF og EPUB plugins
-        run: |
-          # Installer mdBook PDF
-          cargo install mdbook-pdf
-          
-          # Installer mdBook EPUB
-          cargo install mdbook-epub
+      - name: Installer mdBook PDF plugin
+        run: cargo install mdbook-pdf
+
+      - name: Installer mdBook EPUB plugin
+        run: cargo install mdbook-epub
 
       - name: Installer afhængigheder for PDF-generering
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser
 
-      - name: Byg mdBook (HTML, PDF og EPUB)
-        run: |
-          mdbook build  # Standard HTML build
-          mdbook-pdf ./
-          mdbook-epub ./
+      - name: Byg mdBook (HTML)
+        run: mdbook build
+
+      - name: Byg mdBook PDF
+        run: mdbook-pdf ./
+
+      - name: Byg mdBook EPUB
+        run: mdbook-epub ./
 
       - name: Flyt PDF og EPUB til book-mappen
         run: |
           mkdir -p ./book/downloads
-          mv ./book.pdf ./book/downloads/
-          mv ./book.epub ./book/downloads/
+          mv ./book.pdf ./book/downloads/ || echo "PDF ikke fundet"
+          mv ./book.epub ./book/downloads/ || echo "EPUB ikke fundet"
 
       - name: Publicer til GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
