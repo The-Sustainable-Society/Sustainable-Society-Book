@@ -27,9 +27,13 @@ jobs:
       - name: Build mdBook (HTML)
         run: mdbook build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
-          force_orphan: true 
+          path: './book'  # Vigtig! Upload kun book-mappen!
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4 
