@@ -43,7 +43,7 @@ For at få mest ud af bogen anbefaler vi, at du:
 
 Lad os sammen udforske og skabe bæredygtige samfund for fremtiden!
 
-<footer class="metadata-footer">
+<div class="metadata-footer">
   <div class="metadata-grid">
     <div class="metadata-item"><span class="metadata-label">Titel:</span> The Sustainable Society</div>
     <div class="metadata-item"><span class="metadata-label">Forfatter:</span> Lars</div>
@@ -52,4 +52,4 @@ Lad os sammen udforske og skabe bæredygtige samfund for fremtiden!
     <div class="metadata-item"><span class="metadata-label">Formål:</span> Introduktion</div>
     <div class="metadata-item"><span class="metadata-label">Tags:</span> bæredygtighed, samfund, systemisk, nordisk</div>
   </div>
-</footer> 
+</div> 

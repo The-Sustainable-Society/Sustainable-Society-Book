@@ -239,50 +239,42 @@ html, body, .book, .book-body, .page, .markdown-section {
   display: none !important;
 }
 
-/* Skab en pæn metadata-footer i bunden af siden */
+/* Fjern det forstyrrende ::after pseudo-element */
 .content main::after {
-  content: "Metadata" !important;
-  order: 999 !important;
-  display: block !important;
-  margin-top: auto !important;
-  padding-top: 20px !important;
-  border-top: 1px solid var(--viking-gold) !important;
-  font-family: var(--ui-font) !important;
-  font-size: 12px !important;
-  color: #888 !important;
-  text-align: center !important;
-}
-
-/* Opret en YAML-ekstrakt før dokumentets slutning */
-.content main::before {
-  content: "" !important;
+  content: none !important;
   display: none !important;
 }
 
-/* Tilføj en dedikeret metadata-footer element og styling via JavaScript */
+/* Fjern det tomme ::before pseudo-element */
+.content main::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Forbedret styling til den strukturerede metadata-footer */
 .metadata-footer {
-  margin-top: auto !important;
+  margin-top: 60px !important;
   padding-top: 20px !important;
   border-top: 1px solid var(--viking-gold) !important;
   font-family: var(--ui-font) !important;
-  order: 1000 !important;
 }
 
 .metadata-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  gap: 10px !important;
+  gap: 15px !important;
 }
 
 .metadata-item {
   color: #666 !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   line-height: 1.5 !important;
 }
 
 .metadata-label {
   font-weight: bold !important;
-  color: #888 !important;
+  color: #555 !important;
+  margin-right: 5px !important;
 }
 
 .content h3 {
