@@ -139,6 +139,9 @@ html, body, .book, .book-body, .page, .markdown-section {
   margin-bottom: 30px;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 80vh !important;
 }
 
 /* mdBook specifikke overskrivninger */
@@ -231,45 +234,55 @@ html, body, .book, .book-body, .page, .markdown-section {
   font-size: 2.2em;
 }
 
-/* Særlig styling til YAML i h2 (metadata fejl-formatering) */
+/* Skjul det oprindelige YAML H2-element med indholdet */
 .content h2:first-of-type:not([id]) {
-  font-family: "Courier New", monospace !important;
-  font-size: 10px !important;
-  font-weight: normal !important;
-  text-align: left !important;
-  white-space: pre-wrap !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  margin: 20px 0 25px 0 !important;
-  max-width: 100% !important;
-  color: #777 !important;
-  line-height: 1.3 !important;
-  position: relative !important;
-  overflow: visible !important;
-  tab-size: 4 !important;
+  display: none !important;
 }
 
-.content h2:first-of-type:not([id])::before {
+/* Skab en pæn metadata-footer i bunden af siden */
+.content main::after {
+  content: "Metadata" !important;
+  order: 999 !important;
+  display: block !important;
+  margin-top: auto !important;
+  padding-top: 20px !important;
+  border-top: 1px solid var(--viking-gold) !important;
+  font-family: var(--ui-font) !important;
+  font-size: 12px !important;
+  color: #888 !important;
+  text-align: center !important;
+}
+
+/* Opret en YAML-ekstrakt før dokumentets slutning */
+.content main::before {
   content: "" !important;
   display: none !important;
 }
 
-/* Styling af YAML nøgler og værdier - meget diskret */
-.content h2:first-of-type:not([id]) {
-  /* Grundlæggende stil for teksten */
-  color: #777 !important;
+/* Tilføj en dedikeret metadata-footer element og styling via JavaScript */
+.metadata-footer {
+  margin-top: auto !important;
+  padding-top: 20px !important;
+  border-top: 1px solid var(--viking-gold) !important;
+  font-family: var(--ui-font) !important;
+  order: 1000 !important;
 }
 
-/* Formater dato og andre nøgleord med farve */
-.content h2:first-of-type:not([id])[innerHTML*="dato"], 
-.content h2:first-of-type:not([id])[innerHTML*="titel"], 
-.content h2:first-of-type:not([id])[innerHTML*="forfatter"], 
-.content h2:first-of-type:not([id])[innerHTML*="emne"], 
-.content h2:first-of-type:not([id])[innerHTML*="formål"], 
-.content h2:first-of-type:not([id])[innerHTML*="tags"] {
-  color: #777 !important;
+.metadata-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.metadata-item {
+  color: #666 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.metadata-label {
+  font-weight: bold !important;
+  color: #888 !important;
 }
 
 .content h3 {

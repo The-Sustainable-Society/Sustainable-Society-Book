@@ -28,7 +28,7 @@ Formålet med denne bog er at:
 
 Denne bog er et dynamisk, kollaborativt projekt, der kontinuerligt udvikles og forbedres. Den er tilgængelig som en online ressource og kan også downloades i forskellige formater for offline læsning.
 
-Alle er velkomne til at bidrage gennem GitHub-platformen ved at foreslå ændringer, tilføje indhold eller rapportere fejl. Se [Bidragydere](./ressourcer/bidragydere.md) for mere information om, hvordan du kan bidrage.
+Alle er velkomne til at bidrage gennem GitHub-platformen ved at foreslå ændringer, tilføje indhold eller rapportere fejl. Se [Bidragydere](./ressourcer/bidragydere.html) for mere information om, hvordan du kan bidrage.
 
 ## Hvordan Du Bruger Denne Bog
 
@@ -41,4 +41,15 @@ For at få mest ud af bogen anbefaler vi, at du:
 - Tjekker ressourcesektionen for yderligere information
 - Downloader bogen i dit foretrukne format for offline læsning
 
-Lad os sammen udforske og skabe bæredygtige samfund for fremtiden! 
+Lad os sammen udforske og skabe bæredygtige samfund for fremtiden!
+
+<footer class="metadata-footer">
+  <div class="metadata-grid">
+    <div class="metadata-item"><span class="metadata-label">Titel:</span> The Sustainable Society</div>
+    <div class="metadata-item"><span class="metadata-label">Forfatter:</span> Lars</div>
+    <div class="metadata-item"><span class="metadata-label">Dato:</span> 2024-03-09</div>
+    <div class="metadata-item"><span class="metadata-label">Emne:</span> Bæredygtighed</div>
+    <div class="metadata-item"><span class="metadata-label">Formål:</span> Introduktion</div>
+    <div class="metadata-item"><span class="metadata-label">Tags:</span> bæredygtighed, samfund, systemisk, nordisk</div>
+  </div>
+</footer> 
