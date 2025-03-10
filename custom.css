@@ -234,39 +234,32 @@ html, body, .book, .book-body, .page, .markdown-section {
 /* Særlig styling til YAML i h2 (metadata fejl-formatering) */
 .content h2:first-of-type:not([id]) {
   font-family: "Courier New", monospace !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   font-weight: normal !important;
   text-align: left !important;
   white-space: pre-wrap !important;
-  background-color: rgba(240, 240, 240, 0.8) !important;
-  border: 1px dashed #ccc !important;
-  border-radius: 5px !important;
-  padding: 10px !important;
-  margin: 0 0 20px 0 !important;
-  max-width: 600px !important;
-  color: #333 !important;
-  line-height: 1.4 !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 20px 0 25px 0 !important;
+  max-width: 100% !important;
+  color: #777 !important;
+  line-height: 1.3 !important;
   position: relative !important;
   overflow: visible !important;
   tab-size: 4 !important;
 }
 
 .content h2:first-of-type:not([id])::before {
-  content: "Metadata 📋" !important;
-  display: block !important;
-  font-family: var(--ui-font) !important;
-  font-size: 14px !important;
-  font-weight: bold !important;
-  color: #555 !important;
-  margin-bottom: 8px !important;
-  border-bottom: 1px solid #ddd !important;
-  padding-bottom: 3px !important;
+  content: "" !important;
+  display: none !important;
 }
 
-/* Styling af YAML nøgler og værdier */
+/* Styling af YAML nøgler og værdier - meget diskret */
 .content h2:first-of-type:not([id]) {
   /* Grundlæggende stil for teksten */
-  color: #444 !important;
+  color: #777 !important;
 }
 
 /* Formater dato og andre nøgleord med farve */
@@ -276,7 +269,7 @@ html, body, .book, .book-body, .page, .markdown-section {
 .content h2:first-of-type:not([id])[innerHTML*="emne"], 
 .content h2:first-of-type:not([id])[innerHTML*="formål"], 
 .content h2:first-of-type:not([id])[innerHTML*="tags"] {
-  color: #222 !important;
+  color: #777 !important;
 }
 
 .content h3 {
