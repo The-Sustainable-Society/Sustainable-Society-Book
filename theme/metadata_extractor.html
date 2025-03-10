@@ -1,0 +1,89 @@
+<!-- Metadata Extractor for mdBook -->
+<script>
+  // Kode der kører efter sidens indhold er indlæst
+  window.addEventListener('load', function() {
+    // Find YAML H2-element
+    const yamlH2 = document.querySelector('.content main > h2:first-of-type:not([id])');
+    
+    if (yamlH2) {
+      // Find .content main::after pseudo-element eller opret en footer
+      const mainElement = document.querySelector('.content main');
+      
+      // Da vi ikke direkte kan manipulere pseudo-elementer, opretter vi et nyt element
+      const metadataFooter = document.createElement('div');
+      metadataFooter.className = 'metadata-footer';
+      
+      // Ekstraher yaml tekst
+      const yamlText = yamlH2.textContent;
+      
+      // Ekstraher metadata fra YAML tekst ved hjælp af regex
+      const titleMatch = yamlText.match(/titel:\s*"([^"]*)"/);
+      const datoMatch = yamlText.match(/dato:\s*"([^"]*)"/);
+      const forfatterMatch = yamlText.match(/forfatter:\s*"([^"]*)"/);
+      const emneMatch = yamlText.match(/emne:\s*"([^"]*)"/);
+      const formaalMatch = yamlText.match(/formål:\s*"([^"]*)"/);
+      const tagsMatch = yamlText.match(/tags:\s*\[(.*?)\]/);
+      
+      // Opret metadata HTML
+      metadataFooter.innerHTML = `
+        <h3>Metadata</h3>
+        <div class="metadata-grid">
+          ${titleMatch ? `<div class="metadata-item"><span class="metadata-label">Titel:</span> ${titleMatch[1]}</div>` : ''}
+          ${forfatterMatch ? `<div class="metadata-item"><span class="metadata-label">Forfatter:</span> ${forfatterMatch[1]}</div>` : ''}
+          ${datoMatch ? `<div class="metadata-item"><span class="metadata-label">Dato:</span> ${datoMatch[1]}</div>` : ''}
+          ${emneMatch ? `<div class="metadata-item"><span class="metadata-label">Emne:</span> ${emneMatch[1]}</div>` : ''}
+          ${formaalMatch ? `<div class="metadata-item"><span class="metadata-label">Formål:</span> ${formaalMatch[1]}</div>` : ''}
+          ${tagsMatch ? `<div class="metadata-item"><span class="metadata-label">Tags:</span> ${tagsMatch[1].replace(/"/g, '').replace(/,/g, ', ')}</div>` : ''}
+        </div>
+      `;
+      
+      // Tilføj footer til slutningen af main content
+      mainElement.appendChild(metadataFooter);
+      
+      // Skjul det oprindelige YAML H2-element helt
+      yamlH2.style.display = 'none';
+    }
+  });
+</script>
+
+<style>
+  /* Styling for metadata footer */
+  .metadata-footer {
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid #C9AB5E; /* Viking Gold */
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .metadata-footer h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .metadata-item {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .metadata-label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
+  }
+  
+  /* Skjul main::after pseudo-element */
+  .content main::after {
+    content: none !important;
+    display: none !important;
+  }
+</style> 

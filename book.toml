@@ -10,6 +10,7 @@ site-url = "/Sustainable-Society-Book/"
 git-repository-url = "https://github.com/The-Sustainable-Society/Sustainable-Society-Book"
 edit-url-template = "https://github.com/The-Sustainable-Society/Sustainable-Society-Book/edit/main/{path}"
 additional-css = ["custom.css"]
+additional-html = ["theme/metadata_extractor.html"]
 default-theme = "light"
 preferred-dark-theme = "navy"
 curly-quotes = true

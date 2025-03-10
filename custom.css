@@ -239,16 +239,50 @@ html, body, .book, .book-body, .page, .markdown-section {
   display: none !important;
 }
 
-/* Fjern det forstyrrende ::after pseudo-element */
+/* Opdateret main::after til at vise meta direkte med pæn formatering */
 .content main::after {
+  content: "Metadata" !important;
+  display: block !important;
+  margin-top: 60px !important;
+  padding: 20px !important;
+  border-top: 1px solid var(--viking-gold) !important;
+  border-bottom: 1px solid var(--viking-gold) !important;
+  font-family: var(--ui-font) !important;
+  font-size: 14px !important;
+  color: #555 !important;
+  text-align: center !important;
+  background-color: rgba(250, 245, 230, 0.2) !important;
+  border-radius: 3px !important;
+}
+
+/* Tilføj en stylesheet med mere metadata-formatering direkte i CSS */
+@media print {
+  .content main::after {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content main::after {
+    font-size: 12px !important;
+    padding: 10px !important;
+  }
+}
+
+/* Fjern andre styling der kunne forstyrre */
+.content main::before {
   content: none !important;
   display: none !important;
 }
 
-/* Fjern det tomme ::before pseudo-element */
-.content main::before {
-  content: none !important;
+/* Skjul eventuelle HTML-metadata-footers, da mdBook ikke renderer dem korrekt */
+.metadata-footer {
   display: none !important;
+}
+
+/* Tilføj en særlig stil til alle sider med YAML frontmatter */
+.content main:has(h2:first-of-type:not([id])) {
+  position: relative !important;
 }
 
 /* Forbedret styling til den strukturerede metadata-footer */

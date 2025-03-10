@@ -64,15 +64,4 @@ For at bringe systemtænkning ind i hverdagen kan du:
 
 ---
 
-I næste afsnit vil vi udforske konkrete værktøjer til systemanalyse og hvordan de kan anvendes i bæredygtighedsprojekter.
-
-<div class="metadata-footer">
-  <div class="metadata-grid">
-    <div class="metadata-item"><span class="metadata-label">Titel:</span> Systemtænkning</div>
-    <div class="metadata-item"><span class="metadata-label">Forfatter:</span> Lars</div>
-    <div class="metadata-item"><span class="metadata-label">Dato:</span> 2024-03-09</div>
-    <div class="metadata-item"><span class="metadata-label">Emne:</span> Systemteori</div>
-    <div class="metadata-item"><span class="metadata-label">Formål:</span> Vejledning</div>
-    <div class="metadata-item"><span class="metadata-label">Tags:</span> systemtænkning, kompleksitet, helhedstænkning</div>
-  </div>
-</div> 
+I næste afsnit vil vi udforske konkrete værktøjer til systemanalyse og hvordan de kan anvendes i bæredygtighedsprojekter. 
