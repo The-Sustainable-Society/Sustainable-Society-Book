@@ -157,51 +157,25 @@ html, body, .book, .book-body, .page, .markdown-section {
 /* Metadata-box styling - erstatter de store overskrifter */
 .content main > .front-matter-container,
 .content main > p:first-of-type {
-  font-size: 0.85em;
-  background-color: rgba(244, 234, 213, 0.8);
-  border-left: 4px solid var(--viking-gold);
-  padding: 12px;
-  margin: 0 0 25px 0;
-  font-family: 'Courier New', monospace;
-  color: var(--viking-brown);
-  line-height: 1.4;
-  white-space: pre-wrap;
-  font-weight: normal;
-  text-align: left;
-  opacity: 0.75;
-  max-width: 600px;
-  border-radius: 4px;
-  position: relative;
-  tab-size: 4;
+  display: none;
 }
 
 /* Tilføj en lille metadata-label */
 .content main > .front-matter-container::before,
 .content main > p:first-of-type::before {
-  content: "Metadata 📋";
-  display: block;
-  font-size: 0.8em;
-  color: var(--viking-brown);
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  margin-bottom: 8px;
-  border-bottom: 1px dashed var(--viking-gold);
-  padding-bottom: 5px;
+  display: none;
 }
 
 /* YAML formatering: fremhæv "nøgler" og "værdier" */
 .content main > .front-matter-container strong,
 .content main > p:first-of-type strong {
-  color: var(--viking-red);
-  font-weight: bold;
+  display: none;
 }
 
 /* YAML formatering: fremhæv tags og lists */
 .content main > .front-matter-container em,
 .content main > p:first-of-type em {
-  color: var(--viking-brown);
-  font-style: normal;
-  font-weight: bold;
+  display: none;
 }
 
 /* Stil for den virkelige H1 titel */
@@ -482,4 +456,69 @@ html, body, .book, .book-body, .page, .markdown-section {
   .content img {
     max-width: 100% !important;
   }
+}
+
+/* YAML Metadata Formatting - Med stærkere selektorer og !important */
+html body .book .book-body .page-wrapper .page .content main > .front-matter-container,
+html body .book .book-body .page-wrapper .page .content main > p:first-of-type {
+  font-size: 0.85em !important;
+  background-color: rgba(244, 234, 213, 0.8) !important;
+  border-left: 4px solid var(--viking-gold) !important;
+  padding: 12px !important;
+  margin: 0 0 25px 0 !important;
+  font-family: 'Courier New', monospace !important;
+  color: var(--viking-brown) !important;
+  line-height: 1.4 !important;
+  white-space: pre-wrap !important; /* Bevar ALLE linjeskift */
+  font-weight: normal !important;
+  text-align: left !important;
+  opacity: 0.9 !important;
+  max-width: 600px !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  tab-size: 4 !important;
+  display: block !important;
+  font-style: normal !important;
+}
+
+/* Formatering af YAML-indhold for at sikre linjeskift */
+html body .book .book-body .page-wrapper .page .content main > p:first-of-type {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  font-size: 11px !important;  /* Fast pixel størrelse for konsistens */
+  letter-spacing: 0 !important;
+}
+
+/* Tilføj en lille metadata-label med stærkere selektor */
+html body .book .book-body .page-wrapper .page .content main > .front-matter-container::before,
+html body .book .book-body .page-wrapper .page .content main > p:first-of-type::before {
+  content: "Metadata 📋" !important;
+  display: block !important;
+  font-size: 0.9em !important;
+  color: var(--viking-brown) !important;
+  font-weight: bold !important;
+  font-family: 'Cinzel', serif !important;
+  margin-bottom: 8px !important;
+  border-bottom: 1px dashed var(--viking-gold) !important;
+  padding-bottom: 5px !important;
+  letter-spacing: 1px !important;
+}
+
+/* YAML Metadata Styling - Fremhævelse af nøgler og værdier */
+html body .book .book-body .page-wrapper .page .content main > p:first-of-type strong,
+html body .book .book-body .page-wrapper .page .content main > .front-matter-container strong {
+  color: var(--viking-red) !important;
+  font-weight: bold !important;
+  display: inline !important;
+}
+
+html body .book .book-body .page-wrapper .page .content main > p:first-of-type em,
+html body .book .book-body .page-wrapper .page .content main > .front-matter-container em {
+  color: var(--viking-brown) !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  display: inline !important;
 } 
