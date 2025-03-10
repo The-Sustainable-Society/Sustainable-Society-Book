@@ -15,6 +15,7 @@ preferred-dark-theme = "navy"
 curly-quotes = true
 mathjax-support = true
 copy-fonts = true
+no-section-label = false
 
 # Note: Download links temporarily disabled - vil blive tilføjet senere
 # [output.html.navbar]
@@ -24,6 +25,10 @@ copy-fonts = true
 #        { text = "📱 EPUB", url = "downloads/book.epub" }
 #    ]}
 # ]
+
+[output.html.fold]
+enable = true
+level = 0
 
 [output.html.playground]
 editable = true
@@ -40,6 +45,15 @@ boost-hierarchy = 1
 boost-paragraph = 1
 expand = true
 heading-split-level = 3
+
+[output.html.redirect]
+enabled = true
+
+# Tilføj footer konfiguration
+[output.html.footer]
+copyright = '© 2024 The Sustainable Society - Lars'
+git-repository-url = "https://github.com/The-Sustainable-Society/Sustainable-Society-Book"
+git-repository-icon = "fa-github"
 
 # Note: EPUB og PDF outputs er midlertidigt deaktiveret
 # [output.epub]

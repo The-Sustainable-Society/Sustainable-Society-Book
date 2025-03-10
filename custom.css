@@ -234,96 +234,42 @@ html, body, .book, .book-body, .page, .markdown-section {
   font-size: 2.2em;
 }
 
-/* Gør YAML H2-elementet pænere i stedet for at skjule det */
+/* Skjul YAML H2-element helt */
 .content h2:first-of-type:not([id]) {
+  display: none !important;
+}
+
+/* Stil mdBook's indbyggede footer */
+.gdpr, .noprint, footer {
   font-family: 'EB Garamond', serif !important;
-  font-size: 13px !important;
-  font-weight: normal !important;
-  text-align: left !important;
-  white-space: pre-wrap !important;
   background-color: rgba(250, 245, 230, 0.2) !important;
-  border: 1px solid var(--viking-gold) !important;
-  border-radius: 5px !important;
-  padding: 15px 20px !important;
-  margin: 60px 0 10px 0 !important;
+  border-top: 1px solid var(--viking-gold) !important;
+  padding: 15px 0 !important;
+  margin-top: 40px !important;
   color: #666 !important;
-  line-height: 1.6 !important;
-  display: block !important; /* Sørg for at den vises */
-  position: relative !important;
-  overflow: visible !important;
+  font-size: 14px !important;
 }
 
-/* Tilføj en metadata label til H2-elementet */
-.content h2:first-of-type:not([id])::before {
-  content: "Metadata" !important;
-  display: block !important;
-  font-family: var(--ui-font) !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  color: #555 !important;
-  margin-bottom: 15px !important;
-  text-align: center !important;
-  border-bottom: 1px solid #ddd !important;
-  padding-bottom: 5px !important;
+/* Stil de enkelts dele i footeren */
+.gdpr a, .noprint a, footer a {
+  color: var(--viking-brown) !important;
+  text-decoration: none !important;
+  transition: color 0.2s !important;
 }
 
-/* Fjern ::after elementet helt, da det skaber forvirring */
+.gdpr a:hover, .noprint a:hover, footer a:hover {
+  color: var(--viking-red) !important;
+  text-decoration: underline !important;
+}
+
+/* Fjern eventuelle forstyrrende efter-elementer */
 .content main::after {
   content: none !important;
   display: none !important;
 }
 
-/* Fremhæv nøgler i YAML-indholdet med fed og farve */
-.content h2:first-of-type:not([id]) {
-  color: #666 !important;
-}
-
-/* Style YAML-formateringen for bedre læsbarhed */
-.content h2:first-of-type:not([id]) {
-  /* Tilføj styling for at gøre YAML mere læsbar */
-  tab-size: 2 !important;
-}
-
-/* Fjern eventuelle forstyrrende elementer i footeren */
+/* Fjern andre elementer der kan forstyrre */
 .metadata-footer, .content main::before {
-  display: none !important;
-}
-
-/* Sørg for at H2-elementet vises i bunden af siden */
-.content main {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.content h2:first-of-type:not([id]) {
-  order: 999 !important;
-}
-
-/* Tilføj responsiv styling */
-@media screen and (max-width: 768px) {
-  .content h2:first-of-type:not([id]) {
-    font-size: 12px !important;
-    padding: 10px !important;
-  }
-}
-
-/* Tilføj en stylesheet med mere metadata-formatering direkte i CSS */
-@media print {
-  .content main::after {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .content main::after {
-    font-size: 12px !important;
-    padding: 10px !important;
-  }
-}
-
-/* Fjern andre styling der kunne forstyrre */
-.content main::before {
-  content: none !important;
   display: none !important;
 }
 
