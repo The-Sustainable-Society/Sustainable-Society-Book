@@ -30,38 +30,13 @@ html, body, .book, .book-body, .page, .markdown-section {
 
 /* Styling for YAML metadata H2 - simpel og ren formatering */
 .content h2:first-of-type:not([id]) {
-  /* Grundlæggende formatering */
-  font-family: monospace !important;
-  font-size: 13px !important;
-  font-weight: normal !important;
-  line-height: 1.6 !important;
-  
-  /* Struktur */
-  display: block !important;
-  white-space: pre-wrap !important;
-  
-  /* Visuel styling */
-  background-color: transparent !important;
-  border: none !important;
-  border-bottom: 1px solid #ddd !important;
-  padding: 10px 0 15px 0 !important;
-  margin: 0 0 30px 0 !important;
-  color: #777 !important;
-}
-
-/* Fjern metadata overskrift */
-.content h2:first-of-type:not([id])::before {
-  content: none !important;
   display: none !important;
 }
 
-/* Fjern elementer der kan forstyrre */
+/* Fjern alle relaterede elementer */
+.content h2:first-of-type:not([id])::before,
 .content main::after,
-.content main::before {
-  content: none !important;
-  display: none !important;
-}
-
+.content main::before,
 .metadata-footer {
   display: none !important;
 }
