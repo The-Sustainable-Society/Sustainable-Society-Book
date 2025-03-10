@@ -1,4 +1,4 @@
-/* Nordisk Tema CSS - Inspireret af vikingestil og middelalderlige manuskripter */
+/* Simpel og ren formatering - Nordisk tema */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -11,6 +11,7 @@
   --viking-parchment: #F4EAD5;
   --border-ornament: 30px;
   --text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  --ui-font: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Grundlæggende stil */
@@ -19,602 +20,166 @@ body {
   color: var(--viking-dark);
   font-family: 'EB Garamond', serif;
   line-height: 1.8;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAExElEQVRogZ2Zy3riMBCE1QZzY4PMjXDM+z/anuXgbMDYQEiA3TWVP661IxEOR4sT7Pb0VFdLZbVer02j0YjfSZL4b6PR8Pvdbpf8/O9/g4DUbrelqiqp69r/1/94L59JkkTqupaqqvz/UNJms5GqqiTLMkmSREXEn6Vp6vdqANqeZZm/q2XRfr+Xqqp8H4CK3+/3/o7ur9Vq/hygl99tNhvf/3q9erbkNxzQfqZpKuv12t9vt1tJ09QPr0EArxfrbxjQwCh9nudyPB5ltVr5PnSI9uCl37AoIDbbOKzr0N+GQbAWHJFhGJ7neb5YGmXDsGEQZxouhEp4lzDhRABo0CQwYAaHQbDYP2+32y8nlHkrBrAzj1itVtLpdKTf7zsjMAQT/OYQhm3aJy8bBvQyAPf7vQyCQaAUAqbgD0kBJjqdjp+BQiSANXgmz/O5EMblRCeXhgHzPJ/LZ8oBWIDQe5qmDmC5XMpkMpF+vy/9fl+azeanRFuWZSEDBgMAV6uVlGX5pWj4/eVyKYPBQIbDoQwGAxmNRjIej6Xb7c4dseyhLLbbrbRaLUnT1DmT53lpdrt1WXU8g4xY0jGPZk8RnYijBYCw47A0D7YnIqLyRaSRJMnZoQD9A10K2RDuoySMCSCW0eDzfD6XweHF9TYTZw8H9CKLjhVqGIMiWYhKFbDCm3xQ9yUbFg1hZBgxgdVnKd1Lw10/k+e5NBqN2nKrCXe0tXQ1JU4MDJxZVIghA9QIKxmAwvEol/V6Lc1m85ymqQuYGJwYvHDAFSUDAHUEPnEynVWaLBAy7jXC+xfXzAXG4aUg1v0NB1YiZAQOcI7NZjMXIxc7InqZtDHDFrJWq3VWMdI9jnUlQ5cNO84gAcZUGgAMhwBqOT3LsulyuZTJZCKj0ciPnhUYQzHCvgwMqWTjgwVY38MjpSwm+iRJLmVZyng8lvF4LMPhUEajkXQ6ndL2yoCw0ikGMa4A+E45jRFKsjyXJElkOp3KdDr1Mx6PpdPpFEBCQzZGnGwMHjHyiO05GrHzGiNpmp5hYj6fy2w2k8lkIoPBQNrt9nnR6FXQGHGysWBAGYkx4pjkCw36fD7LfD6X+Xwus9nM22K73a6vRmJ1b1nJZT32jBnhqvRypjw7nY602+1SRPSSxIhoWZcxgzJR5hCDWYnVdV26YvxYfx2G+QqMiF5h2M5gjHAYjmGE/+OYMf9+v5e6rpv1+SzD4VAGg4H0+31pt9syHA59xbhYLLxcZwHjiJiMGHhMnHqGC6fTaR4WiNWf7PK5XMhFCYcWuAJz9vHxIe/v7/L29ibv7+/y9vYmZVmWQxcIJ8DxWYELGOYMB+WwUNqbWo78/f1dXl9f5eXlRf78+SOvr6/y8fEhTZLI6XSSqqrcs3a7LXmey2KxcM/4OEcNUjbK9GQykZeXFz9//vwRsAMmOLxwVrgtcjmhXqeUwJFer+eZgRNY8OXlRZ6fn+Xp6UkeHx/l6elJnp+fpSAjfDYAsQDwm8sCnMnz3JngSz88A37jDI7gCPb4+voqj4+P8vv3b3l4eJCHhwd5eHiQx8dH+R8W4N1TiHsxSgAAAABJRU5ErkJggg==');
-  background-blend-mode: overlay;
+  font-size: 18px;
 }
 
+/* Rene baggrundsfarver */
 html, body, .book, .book-body, .page, .markdown-section {
   background-color: var(--viking-parchment) !important;
 }
 
-.book {
-  min-height: 100vh;
-  background-color: var(--viking-parchment) !important;
-  box-shadow: 0 0 50px rgba(0,0,0,0.3);
-  position: relative;
-}
-
-/* Tilføj ramme-dekoration til hele bogen */
-.book::before, .book::after {
-  content: "";
-  position: absolute;
-  top: var(--border-ornament);
-  left: var(--border-ornament);
-  right: var(--border-ornament);
-  bottom: var(--border-ornament);
-  border: 3px solid var(--viking-brown);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.book::before {
-  border-image: url('./theme/svg/nordic-border.svg') 30 stretch;
-}
-
-/* Navigations-panel */
-.sidebar {
-  font-family: 'Cinzel', serif;
-  background-color: var(--viking-parchment) !important;
-  border-right: 3px solid var(--viking-brown);
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAExElEQVRogZ2Zy3riMBCE1QZzY4PMjXDM+z/anuXgbMDYQEiA3TWVP661IxEOR4sT7Pb0VFdLZbVer02j0YjfSZL4b6PR8Pvdbpf8/O9/g4DUbrelqiqp69r/1/94L59JkkTqupaqqvz/UNJms5GqqiTLMkmSREXEn6Vp6vdqANqeZZm/q2XRfr+Xqqp8H4CK3+/3/o7ur9Vq/hygl99tNhvf/3q9erbkNxzQfqZpKuv12t9vt1tJ09QPr0EArxfrbxjQwCh9nudyPB5ltVr5PnSI9uCl37AoIDbbOKzr0N+GQbAWHJFhGJ7neb5YGmXDsGEQZxouhEp4lzDhRABo0CQwYAaHQbDYP2+32y8nlHkrBrAzj1itVtLpdKTf7zsjMAQT/OYQhm3aJy8bBvQyAPf7vQyCQaAUAqbgD0kBJjqdjp+BQiSANXgmz/O5EMblRCeXhgHzPJ/LZ8oBWIDQe5qmDmC5XMpkMpF+vy/9fl+azeanRFuWZSEDBgMAV6uVlGX5pWj4/eVyKYPBQIbDoQwGAxmNRjIej6Xb7c4dseyhLLbbrbRaLUnT1DmT53lpdrt1WXU8g4xY0jGPZk8RnYijBYCw47A0D7YnIqLyRaSRJMnZoQD9A10K2RDuoySMCSCW0eDzfD6XweHF9TYTZw8H9CKLjhVqGIMiWYhKFbDCm3xQ9yUbFg1hZBgxgdVnKd1Lw10/k+e5NBqN2nKrCXe0tXQ1JU4MDJxZVIghA9QIKxmAwvEol/V6Lc1m85ymqQuYGJwYvHDAFSUDAHUEPnEynVWaLBAy7jXC+xfXzAXG4aUg1v0NB1YiZAQOcI7NZjMXIxc7InqZtDHDFrJWq3VWMdI9jnUlQ5cNO84gAcZUGgAMhwBqOT3LsulyuZTJZCKj0ciPnhUYQzHCvgwMqWTjgwVY38MjpSwm+iRJLmVZyng8lvF4LMPhUEajkXQ6ndL2yoCw0ikGMa4A+E45jRFKsjyXJElkOp3KdDr1Mx6PpdPpFEBCQzZGnGwMHjHyiO05GrHzGiNpmp5hYj6fy2w2k8lkIoPBQNrt9nnR6FXQGHGysWBAGYkx4pjkCw36fD7LfD6X+Xwus9nM22K73a6vRmJ1b1nJZT32jBnhqvRypjw7nY602+1SRPSSxIhoWZcxgzJR5hCDWYnVdV26YvxYfx2G+QqMiF5h2M5gjHAYjmGE/+OYMf9+v5e6rpv1+SzD4VAGg4H0+31pt9syHA59xbhYLLxcZwHjiJiMGHhMnHqGC6fTaR4WiNWf7PK5XMhFCYcWuAJz9vHxIe/v7/L29ibv7+/y9vYmZVmWQxcIJ8DxWYELGOYMB+WwUNqbWo78/f1dXl9f5eXlRf78+SOvr6/y8fEhTZLI6XSSqqrcs3a7LXmey2KxcM/4OEcNUjbK9GQykZeXFz9//vwRsAMmOLxwVrgtcjmhXqeUwJFer+eZgRNY8OXlRZ6fn+Xp6UkeHx/l6elJnp+fpSAjfDYAsQDwm8sCnMnz3JngSz88A37jDI7gCPb4+voqj4+P8vv3b3l4eJCHhwd5eHiQx8dH+R8W4N1TiHsxSgAAAABJRU5ErkJggg==');
-  background-blend-mode: overlay;
-}
-
-.sidebar-scrollbox {
-  padding: 0;
-}
-
-.chapter {
-  padding: 0;
-  font-size: 1.1em;
-}
-
-.chapter li.chapter-item {
-  margin: 0;
-  padding: 0;
-}
-
-.chapter li.chapter-item a {
-  display: block;
-  padding: 12px 15px;
-  color: var(--viking-dark);
-  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
-  transition: all 0.3s;
-  font-weight: normal;
-}
-
-.chapter li.chapter-item a:hover {
-  background-color: rgba(139, 69, 19, 0.1);
-  transform: translateX(5px);
-}
-
-.chapter li.chapter-item a.active {
-  color: var(--viking-red);
-  font-weight: bold;
-  background-color: rgba(139, 69, 19, 0.15);
-  border-left: 4px solid var(--viking-red);
-}
-
-.chapter li.chapter-item a.active:hover {
-  transform: none;
-}
-
-.chapter li.spacer {
-  height: 20px;
-}
-
-/* Indholdsfortegnelse */
-.section {
-  margin-top: 20px;
-  padding: 0;
-}
-
-.section > a.header {
-  font-family: 'Cinzel', serif;
-  font-size: 1.3em;
-  color: var(--viking-brown);
-  display: block;
-  padding: 8px 15px;
-  border-bottom: 2px solid var(--viking-gold);
-  margin-bottom: 10px;
-  text-shadow: var(--text-shadow);
-}
-
-/* Hovedindhold */
-.content {
-  padding: 0 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  background-color: var(--viking-parchment) !important;
-}
-
-.content main {
-  position: relative;
-  z-index: 1;
-  background-color: var(--viking-parchment) !important;
-  padding: 30px 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  display: flex !important;
-  flex-direction: column !important;
-  min-height: 80vh !important;
-}
-
-/* mdBook specifikke overskrivninger */
-.page-wrapper {
-  background-color: var(--viking-parchment) !important;
-}
-
-.page {
-  background-color: var(--viking-parchment) !important;
-}
-
-#content {
-  background-color: var(--viking-parchment) !important;
-}
-
-/* Metadata-box styling - erstatter de store overskrifter */
-.content main > .front-matter-container,
-.content main > p:first-of-type {
-  display: none;
-}
-
-/* Tilføj en lille metadata-label */
-.content main > .front-matter-container::before,
-.content main > p:first-of-type::before {
-  display: none;
-}
-
-/* YAML formatering: fremhæv "nøgler" og "værdier" */
-.content main > .front-matter-container strong,
-.content main > p:first-of-type strong {
-  display: none;
-}
-
-/* YAML formatering: fremhæv tags og lists */
-.content main > .front-matter-container em,
-.content main > p:first-of-type em {
-  display: none;
-}
-
-/* Stil for den virkelige H1 titel */
-.content main > h1 {
-  display: block !important; /* Tving visning af alle H1 */
-  margin-top: 30px;
-  font-size: 2.8em;
-  color: var(--viking-red);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  text-align: center;
-  font-family: 'Cinzel', serif;
-  border-bottom: 2px solid var(--viking-gold);
-  padding-bottom: 10px;
-}
-
-/* Stil for kursiv undertitel efter H1 */
-.content main > h1 + p > em:first-child {
-  display: block;
-  text-align: center;
-  font-size: 1.4em;
-  margin: 15px 0 40px 0;
-  color: var(--viking-brown);
-  font-family: 'EB Garamond', serif;
-}
-
-/* Normale overskrifter - men sørg for at H1 har en større margin-top for at adskille det fra metadata */
-.content h1, 
-.content h2, 
-.content h3, 
-.content h4, 
-.content h5 {
-  font-family: 'Cinzel', serif;
-  color: var(--viking-brown);
-  border-bottom: 2px solid var(--viking-gold);
-  padding-bottom: 10px;
-  margin: 40px 0 20px 0;
-  text-shadow: var(--text-shadow);
-  display: block !important; /* Sikrer at overskrifter altid vises */
-}
-
-/* Specifik stil for hovedoverskrift H1 */
-.content h1 {
-  font-size: 2.8em;
-  text-align: center;
-  color: var(--viking-red);
-  margin-top: 40px; /* Større margin-top for at adskille fra metadata */
-  margin-bottom: 30px;
-  border-bottom: 3px solid var(--viking-gold);
-  padding-bottom: 15px;
-}
-
-.content h2 {
-  font-size: 2.2em;
-}
-
-/* Gør YAML H2-elementet pænere (lad være med at skjule det) */
+/* Styling for YAML metadata H2 - simpel og ren formatering */
 .content h2:first-of-type:not([id]) {
-  font-family: 'EB Garamond', serif !important;
+  /* Grundlæggende formatering */
+  font-family: monospace !important;
   font-size: 13px !important;
   font-weight: normal !important;
-  text-align: left !important;
-  white-space: pre-wrap !important;
-  background-color: rgba(250, 245, 230, 0.2) !important;
-  border: 1px solid var(--viking-gold) !important;
-  border-radius: 5px !important;
-  padding: 15px 20px !important;
-  margin: 40px 0 40px 0 !important;
-  color: #666 !important;
   line-height: 1.6 !important;
-  display: block !important; 
-  position: relative !important;
-  overflow: visible !important;
-}
-
-/* Tilføj en metadata label til H2-elementet */
-.content h2:first-of-type:not([id])::before {
-  content: "Metadata" !important;
+  
+  /* Struktur */
   display: block !important;
-  font-family: var(--ui-font) !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  color: #555 !important;
-  margin-bottom: 15px !important;
-  text-align: center !important;
+  white-space: pre-wrap !important;
+  
+  /* Visuel styling */
+  background-color: transparent !important;
+  border: none !important;
   border-bottom: 1px solid #ddd !important;
-  padding-bottom: 5px !important;
+  padding: 10px 0 15px 0 !important;
+  margin: 0 0 30px 0 !important;
+  color: #777 !important;
 }
 
-/* Fjern ::after elementet helt, da det skaber forvirring */
-.content main::after {
+/* Fjern metadata overskrift */
+.content h2:first-of-type:not([id])::before {
   content: none !important;
   display: none !important;
 }
 
-/* Fjern andre elementer der kan forstyrre */
-.metadata-footer, .content main::before {
+/* Fjern elementer der kan forstyrre */
+.content main::after,
+.content main::before {
+  content: none !important;
   display: none !important;
 }
 
-/* Style mdBook's indbyggede footer hvis den er aktiv */
-.gdpr, .noprint, footer {
-  font-family: 'EB Garamond', serif !important;
-  background-color: rgba(250, 245, 230, 0.2) !important;
-  border-top: 1px solid var(--viking-gold) !important;
-  padding: 15px 0 !important;
-  margin-top: 40px !important;
-  color: #666 !important;
-  font-size: 14px !important;
+.metadata-footer {
+  display: none !important;
 }
 
-/* Stil de enkelte dele i footeren */
-.gdpr a, .noprint a, footer a {
+/* Simpel sidefod styling */
+footer {
+  margin-top: 40px !important;
+  padding-top: 15px !important;
+  border-top: 1px solid #ddd !important;
+  font-size: 14px !important;
+  color: #777 !important;
+  font-family: var(--ui-font) !important;
+}
+
+/* Simpel typografi */
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4 {
+  font-family: 'Cinzel', serif !important;
+  color: var(--viking-brown) !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.content h1 {
+  font-size: 2.5em !important;
+  text-align: center !important;
+  border-bottom: 1px solid var(--viking-gold) !important;
+  padding-bottom: 0.3em !important;
+  margin-bottom: 0.8em !important;
+}
+
+.content h2 {
+  font-size: 1.8em !important;
+}
+
+.content h3 {
+  font-size: 1.5em !important;
+}
+
+.content h4 {
+  font-size: 1.3em !important;
+}
+
+.content a {
   color: var(--viking-brown) !important;
   text-decoration: none !important;
   transition: color 0.2s !important;
 }
 
-.gdpr a:hover, .noprint a:hover, footer a:hover {
+.content a:hover {
   color: var(--viking-red) !important;
   text-decoration: underline !important;
 }
 
-/* Skjul eventuelle HTML-metadata-footers, da mdBook ikke renderer dem korrekt */
-.metadata-footer {
-  margin-top: 60px !important;
-  padding-top: 20px !important;
-  border-top: 1px solid var(--viking-gold) !important;
-  font-family: var(--ui-font) !important;
-}
-
-.metadata-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  gap: 15px !important;
-}
-
-.metadata-item {
-  color: #666 !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-}
-
-.metadata-label {
-  font-weight: bold !important;
-  color: #555 !important;
-  margin-right: 5px !important;
-}
-
-.content h3 {
-  font-size: 1.8em;
-}
-
-.content h4 {
-  font-size: 1.5em;
-}
-
-.content a {
-  color: var(--viking-red);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.content a:hover {
-  color: var(--viking-brown);
-  text-decoration: underline;
-}
-
 .content p {
-  margin-bottom: 1.5em;
-  font-size: 1.2em;
-  line-height: 1.7;
+  margin-bottom: 1em !important;
+  font-size: 1.1em !important;
+  line-height: 1.6 !important;
 }
 
-/* Deaktiver første bogstav større på YAML frontmatter */
-.content p:first-of-type::first-letter {
-  float: none;
-  font-size: inherit;
-  line-height: inherit;
-  margin-right: 0;
-  color: inherit;
-  font-family: inherit;
-  padding-top: 0;
-  text-shadow: none;
+/* Navigation */
+.sidebar {
+  background-color: var(--viking-dark) !important;
+  color: var(--viking-light) !important;
 }
 
-/* Aktiver første bogstav større på første paragraf efter H1 */
-.content h1 + p::first-letter {
-  float: left;
-  font-size: 3.5em;
-  line-height: 0.8;
-  margin-right: 0.1em;
-  color: var(--viking-red);
-  font-family: 'Cinzel', serif;
-  padding-top: 0.1em;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+.sidebar-scrollbox {
+  background-color: var(--viking-dark) !important;
 }
 
-/* Dekorative elementer */
-.content main::before, .content main::after {
-  content: '';
-  display: block;
-  height: 30px;
-  margin: 40px 0;
-  background-image: url('./theme/svg/nordic-divider.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.chapter {
+  font-family: 'EB Garamond', serif !important;
 }
 
-.content blockquote {
-  margin: 40px 0;
-  padding: 20px 30px;
-  font-style: italic;
-  text-align: center;
-  font-size: 1.3em;
-  position: relative;
-  color: var(--viking-brown);
-  background-color: rgba(244, 234, 213, 0.6);
-  border-left: 5px solid var(--viking-gold);
-  border-right: 5px solid var(--viking-gold);
+.chapter li.chapter-item {
+  margin: 5px 0 !important;
 }
 
-.content blockquote::before,
-.content blockquote::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 40%;
-  height: 2px;
-  background-color: var(--viking-gold);
-  transform: translateX(-50%);
+.chapter li.chapter-item a {
+  color: var(--viking-light) !important;
+  font-size: 1.1em !important;
+  padding: 5px 10px !important;
+  display: block !important;
+  transition: background-color 0.2s !important;
 }
 
-.content blockquote::before {
-  top: 10px;
+.chapter li.chapter-item a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  text-decoration: none !important;
 }
 
-.content blockquote::after {
-  bottom: 10px;
+.chapter li.chapter-item a.active {
+  color: var(--viking-gold) !important;
+  font-weight: 600 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Tabeller */
-.content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 30px 0;
-  font-size: 1.1em;
+.chapter li.chapter-item a.active:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-.content table th {
-  background-color: var(--viking-brown);
-  color: var(--viking-light);
-  text-align: left;
-  padding: 15px;
-  font-family: 'Cinzel', serif;
-}
-
-.content table td {
-  padding: 15px;
-  border-bottom: 1px solid rgba(139, 69, 19, 0.3);
-}
-
-.content table tr:nth-child(even) {
-  background-color: rgba(244, 234, 213, 0.5);
-}
-
-/* Kode */
-.content pre {
-  padding: 20px;
-  background-color: var(--viking-dark);
-  color: var(--viking-light);
-  border-radius: 5px;
-  font-size: 1.1em;
-  overflow-x: auto;
-  border: 2px solid var(--viking-brown);
-}
-
-.content code {
-  background-color: rgba(139, 69, 19, 0.1);
-  color: var(--viking-brown);
-  padding: 3px 5px;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-.content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 30px auto;
-  border: 5px solid var(--viking-brown);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Navigations-knapper */
-.nav-chapters {
-  color: var(--viking-brown);
-  background-color: var(--viking-parchment);
-  font-family: 'Cinzel', serif;
-  border: 2px solid var(--viking-gold);
-}
-
-.nav-chapters:hover {
-  color: var(--viking-red);
-  background-color: var(--viking-light);
-}
-
-/* Mobilvisning */
+/* Responsiv styling */
 @media screen and (max-width: 768px) {
-  .book.font-size-0 .content {
-    padding: 0 15px;
+  body {
+    font-size: 16px !important;
   }
   
   .content h1 {
-    font-size: 2.2em;
+    font-size: 2em !important;
   }
   
   .content h2 {
-    font-size: 1.8em;
+    font-size: 1.6em !important;
   }
   
-  .content p {
-    font-size: 1.1em;
+  .content h2:first-of-type:not([id]) {
+    font-size: 11px !important;
   }
-  
-  .content main {
-    padding: 20px;
-  }
-  
-  .book::before, .book::after {
-    display: none;
-  }
-}
-
-/* Download knapper */
-.download-btn {
-  display: inline-block;
-  background-color: var(--viking-brown);
-  color: var(--viking-light);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: 'Cinzel', serif;
-  text-decoration: none;
-  margin: 10px;
-  border: 2px solid var(--viking-gold);
-  transition: all 0.3s;
-}
-
-.download-btn:hover {
-  background-color: var(--viking-red);
-  color: var(--viking-light);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-/* Print-venlig udgave */
-@media print {
-  body {
-    background: none;
-    color: black;
-  }
-  
-  .content blockquote {
-    border: 1px solid #ccc;
-  }
-  
-  .content pre {
-    border: 1px solid #ccc;
-  }
-  
-  .content img {
-    max-width: 100% !important;
-  }
-}
-
-/* YAML Metadata Formatting - Med stærkere selektorer og !important */
-html body .book .book-body .page-wrapper .page .content main > .front-matter-container,
-html body .book .book-body .page-wrapper .page .content main > p:first-of-type {
-  font-size: 0.85em !important;
-  background-color: rgba(244, 234, 213, 0.8) !important;
-  border-left: 4px solid var(--viking-gold) !important;
-  padding: 12px !important;
-  margin: 0 0 25px 0 !important;
-  font-family: 'Courier New', monospace !important;
-  color: var(--viking-brown) !important;
-  line-height: 1.4 !important;
-  white-space: pre-wrap !important; /* Bevar ALLE linjeskift */
-  font-weight: normal !important;
-  text-align: left !important;
-  opacity: 0.9 !important;
-  max-width: 600px !important;
-  border-radius: 4px !important;
-  position: relative !important;
-  tab-size: 4 !important;
-  display: block !important;
-  font-style: normal !important;
-}
-
-/* Formatering af YAML-indhold for at sikre linjeskift */
-html body .book .book-body .page-wrapper .page .content main > p:first-of-type {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  -webkit-hyphens: none !important;
-  -ms-hyphens: none !important;
-  hyphens: none !important;
-  font-size: 11px !important;  /* Fast pixel størrelse for konsistens */
-  letter-spacing: 0 !important;
-}
-
-/* Tilføj en lille metadata-label med stærkere selektor */
-html body .book .book-body .page-wrapper .page .content main > .front-matter-container::before,
-html body .book .book-body .page-wrapper .page .content main > p:first-of-type::before {
-  content: "Metadata 📋" !important;
-  display: block !important;
-  font-size: 0.9em !important;
-  color: var(--viking-brown) !important;
-  font-weight: bold !important;
-  font-family: 'Cinzel', serif !important;
-  margin-bottom: 8px !important;
-  border-bottom: 1px dashed var(--viking-gold) !important;
-  padding-bottom: 5px !important;
-  letter-spacing: 1px !important;
-}
-
-/* YAML Metadata Styling - Fremhævelse af nøgler og værdier */
-html body .book .book-body .page-wrapper .page .content main > p:first-of-type strong,
-html body .book .book-body .page-wrapper .page .content main > .front-matter-container strong {
-  color: var(--viking-red) !important;
-  font-weight: bold !important;
-  display: inline !important;
-}
-
-html body .book .book-body .page-wrapper .page .content main > p:first-of-type em,
-html body .book .book-body .page-wrapper .page .content main > .front-matter-container em {
-  color: var(--viking-brown) !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  display: inline !important;
 } 
